@@ -2,7 +2,7 @@
 import React from "react";
 
 import Link from "next/link";
-import motion from "framer-motion";
+import {motion} from "framer-motion";
 import { usePathname } from "next/navigation";
 
 interface NavProps {
@@ -28,8 +28,7 @@ const Nav: React.FC<NavProps> = ({
     <div className={`${containerStyles}`}>
       {links.map(({ url, name }) => (
         <Link href={url} key={name} className={`capitalize ${LinkStyles}`}>
-          {/* Error: for motion.span */}
-          {/* {url === path && (
+          {url === path && (
             <motion.span
               initial={{ y: "-100%" }}
               animate={{ y: 0 }}
@@ -37,7 +36,7 @@ const Nav: React.FC<NavProps> = ({
               layoutId="underline"
               className={`${underlineStyles}`}
             />
-          )} */}
+          )}
           {name}
         </Link>
       ))}
