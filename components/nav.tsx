@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 interface NavProps {
   containerStyles: string;
   LinkStyles: string;
-  underlineStyles: string;
+  underlineStyles?: string;
 }
 
 const links = [

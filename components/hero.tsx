@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { RiArrowDownSLine, RiBriefcase4Fill } from "react-icons/ri";
+import { RiArrowDownSLine, RiBriefcase4Fill, RiProjectorFill, RiTeamFill } from "react-icons/ri";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 import Social from "./social";
@@ -44,11 +44,26 @@ const Hero = (props: Props) => {
           </div>
           {/* Image */}
           <div className="hidden xl:flex relative">
-            {/* Badge */}
+            {/* Badge Experince */}
             <Badge
+              containerStyles="absolute top-[24%] -left-[5rem]"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Years of Experience"
+            />
+            {/* Badge  Projects*/}
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              icon={<RiProjectorFill />}
+              endCountNum={5}
+              badgeText="Finished Projects"
+            />
+            {/* Badge  */}
+            <Badge
+              containerStyles="absolute top-[55%] -right-8"
+              icon={<RiTeamFill />}
+              endCountNum={100}
+              badgeText="Happy Clients"
             />
             <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] bg-no-repeat absolute -top-1 -right-2 h-[500px]" />
             <DivImg

@@ -3,7 +3,7 @@ import React, { FC, ReactNode } from "react";
 import CountUp from "react-countup";
 
 type BadgeProps = {
-  containerStyles?: string;
+  containerStyles: string;
   icon: ReactNode;
   endCountNum: number;
   endCountText?: string;
@@ -19,7 +19,7 @@ const Badge: FC<BadgeProps> = ({
 }) => {
   return (
     <div className={`badge ${containerStyles}`}>
-      <div className="text-3xl text-primary">{icon}</div>
+      <div className="text-3xl text-primary">{icon}</div> 
       <div className="flex items-center gap-x-2">
         <div className="text-4xl leading-none font-bold text-primary">
           <CountUp end={endCountNum} delay={1} duration={4} />
