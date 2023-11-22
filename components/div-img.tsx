@@ -1,8 +1,16 @@
-import React from 'react'
+import Image from 'next/image'
+import React, { FC } from 'react'
 
-const DivImg = () => {
+type DevImageProps={
+  containerStyles: string
+  imgSrc: string
+}
+
+const DivImg : FC<DevImageProps>= ({containerStyles,imgSrc}) => {
   return (
-    <div>DivImg</div>
+    <div className={`${containerStyles}`}>
+      <Image src={imgSrc} fill priority alt=''/>
+    </div>
   )
 }
 

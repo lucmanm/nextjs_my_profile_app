@@ -8,7 +8,7 @@ const Logo = (props: Props) =>  {
   
   return (
     <Link href="/">
-      <Image src="/logo.svg" alt='Logo' width={54} height={50} priority />
+      <Image src="/MyLogo.png" alt='Logo' width={54} height={50} priority />
     </Link>
   )
 

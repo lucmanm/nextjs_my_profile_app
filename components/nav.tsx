@@ -6,9 +6,9 @@ import {motion} from "framer-motion";
 import { usePathname } from "next/navigation";
 
 interface NavProps {
-  containerStyles: String;
-  LinkStyles: String;
-  underlineStyles: String;
+  containerStyles: string;
+  LinkStyles: string;
+  underlineStyles: string;
 }
 
 const links = [

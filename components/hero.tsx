@@ -1,8 +1,11 @@
 import Link from "next/link";
 import React from "react";
-import { RiArrowDownSLine } from "react-icons/ri";
+import { RiArrowDownSLine, RiBriefcase4Fill } from "react-icons/ri";
 import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
+import Social from "./social";
+import DivImg from "./div-img";
+import Badge from "./badge";
 type Props = {};
 
 const Hero = (props: Props) => {
@@ -17,7 +20,7 @@ const Hero = (props: Props) => {
             <h1 className="h1 mb-4">Helo, My Name is Mahid, Lucman</h1>
             <p className="subtitle max-w-[490] mx-auto xl:mx-0">
               I am currently working as a IT Support in Computech Comapny here
-              in Saudi Arab ia
+              in Saudi Arabia
             </p>
             {/* buttons */}
             <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
@@ -32,8 +35,27 @@ const Hero = (props: Props) => {
                 </Button>
               </Link>
             </div>
+            <Social
+              containerStyle="flex gap-x-6 mx-auto xl:mx-0"
+              iconsStyles={
+                "text-foreground text-[22px] hover:text-primary transition-all"
+              }
+            />
           </div>
-          <div className="hidden xl:flex relative">Image</div>
+          {/* Image */}
+          <div className="hidden xl:flex relative">
+            {/* Badge */}
+            <Badge
+              icon={<RiBriefcase4Fill />}
+              endCountNum={2}
+              badgeText="Years of Experience"
+            />
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] bg-no-repeat absolute -top-1 -right-2 h-[500px]" />
+            <DivImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/MySelftwo.png"
+            />
+          </div>
         </div>
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 ">
           <RiArrowDownSLine className="text-3xl text-primary" />
