@@ -46,22 +46,22 @@ const Hero = (props: Props) => {
           <div className="hidden xl:flex relative">
             {/* Badge Experince */}
             <Badge
-              containerStyles="absolute top-[24%] -left-[5rem]"
-              icon={<RiBriefcase4Fill />}
+              containerStyles="absolute top-[24%] -left-[5rem]  "
+              icon={<RiBriefcase4Fill className="dark:text-black"/>}
               endCountNum={2}
               badgeText="Years of Experience"
             />
             {/* Badge  Projects*/}
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"
-              icon={<RiProjectorFill />}
+              icon={<RiProjectorFill className="dark:text-black"/>}
               endCountNum={5}
               badgeText="Finished Projects"
             />
             {/* Badge  */}
             <Badge
               containerStyles="absolute top-[55%] -right-8"
-              icon={<RiTeamFill />}
+              icon={<RiTeamFill className="dark:text-black"/>}
               endCountNum={100}
               badgeText="Happy Clients"
             />

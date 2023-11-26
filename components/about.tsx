@@ -92,18 +92,8 @@ const qualificationData = [
     ],
   },
 ];
-type SkillsProps = {
-  title: string;
-  data:
-    | {
-        name: string;
-      }[]
-    | {
-        imagePath: string;
-      }[];
-};
 
-const skillsData: SkillsProps[] = [
+const skillsData = [
   {
     title: "Skills",
     data: [
@@ -305,25 +295,30 @@ const AboutSection = () => {
                       <div className="border-b border-border  mb-4"></div>
 
                       {/* Skills  */}
-
                       <div>
-                        {skillsData[0].data.map(({ name }) => {
+                        {skillsData[0].data.map((skill, index) => {
                           return (
                             <div
-                              key={name}
+                              key={index}
                               className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
                             >
-                              <div className="font-medium">{name}</div>
+                              <div className="font-medium">{skill}</div>
                             </div>
                           );
                         })}
                       </div>
                       {/* Tools */}
                       <div className="flex gap-x-8 justify-center xl:justify-start">
-                        {skillsData[1].data.map(({ imagePath }) => {
+                        {skillsData[1].data.map((data, index) => {
                           return (
-                            <div key={imagePath}>
-                              <Image src={imagePath} alt="" width={48} height={48} alt="Logo" priority/>
+                            <div key={index}>
+                              <Image
+                                src={data}
+                                width={48}
+                                height={48}
+                                alt="Logo"
+                                priority
+                              />
                             </div>
                           );
                         })}
