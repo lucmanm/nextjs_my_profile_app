@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React, { FC, ReactNode } from "react";
 import {
@@ -28,11 +29,11 @@ type SocialProps = {
 
 const Social: FC<SocialProps> = ({ containerStyle, iconsStyles }) => {
   return (
-    <div className={`${containerStyle}`}>
+    <div className={cn(containerStyle)}>
       {icons.map(({ url, name }: IconsProps) => {
         return (
           <Link href={url} key={url}>
-            <div className={`${iconsStyles}`}>{name}</div>
+            <div className={cn(iconsStyles)}>{name}</div>
           </Link>
         );
       })}

@@ -1,11 +1,24 @@
-import React from 'react'
+import React from "react";
+import Social from "./social";
 
-type Props = {}
+type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <div>Footer</div>
-  )
-}
+    <footer className="bg-secondary py-12">
+      <div className="container mx-auto">
+        <div className="flex flex-col items-center justify-between">
+          <Social
+            containerStyle="flex gap-x-6 mx-auto xl:mx-0 mb-4"
+            iconsStyles="text-primary dark:text-white/70 text-[20px] hover:text-white dark:hover:text-primary transition-all"
+          />
+          <div className="text-muted-foreground">
+            Copyright &copy; Mahid Lucman. All Right Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
