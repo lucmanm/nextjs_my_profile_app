@@ -11,13 +11,9 @@ import {
 } from "lucide-react";
 import DivImg from "./div-img";
 import Image from "next/image";
+import { title } from "process";
 
-type InfoProps = {
-  icon: React.ReactElement;
-  text: string;
-};
-
-const infoData: InfoProps[] = [
+const infoData = [
   {
     icon: <User2 size={20} />,
     text: "Mahid Lucman",
@@ -55,7 +51,7 @@ type ExperienceProps = {
   years: string;
 };
 
-type QualificationDataProps = {
+type QualificaitonsProps = {
   title: string;
   data: EducationProps[] | ExperienceProps[];
 };
@@ -134,6 +130,11 @@ const skillsData = [
 ];
 
 const AboutSection = () => {
+  const getData = (data: QualificaitonsProps[], title: string) => {
+    return data.find((data) => data.title === title);
+  };
+  console.log(getData(qualificationData, title)?.title);
+
   return (
     <section className="xl:h-[860px] pb-12 xl:py-24">
       <div className="container mx-auto">
@@ -193,7 +194,7 @@ const AboutSection = () => {
                   </div>
 
                   <div className="grid xl:grid-cols-2 gap-4 mb-12 left">
-                    {infoData.map(({ icon, text }: InfoProps) => (
+                    {infoData.map(({ icon, text }) => (
                       <div
                         key={text}
                         className="flex items-center gap-x-4 mx-auto xl:mx-0 "
@@ -219,7 +220,7 @@ const AboutSection = () => {
                       <div className="flex gap-x-4 items-center text-[22px]text-primary">
                         <Briefcase />
                         <h4 className="capitalize font-medium">
-                          {qualificationData[1].title}
+                          {getData(qualificationData, "experience")?.title}
                         </h4>
                       </div>
                       <div>
@@ -302,7 +303,7 @@ const AboutSection = () => {
                               key={index}
                               className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
                             >
-                              <div className="font-medium">{skill}</div>
+                              <div className="font-medium">no skills</div>
                             </div>
                           );
                         })}
@@ -313,7 +314,7 @@ const AboutSection = () => {
                           return (
                             <div key={index}>
                               <Image
-                                src={data}
+                                src={"///"}
                                 width={48}
                                 height={48}
                                 alt="Logo"
