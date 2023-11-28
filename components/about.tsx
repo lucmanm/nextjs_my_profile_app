@@ -40,18 +40,31 @@ const infoData = [
   },
 ];
 
-type QualificaitonsProps = {
-  title: string;
-  data: Array<{
-    university?: string;
-    qualification?: string;
-    years?: string;
-    company?: string;
-    role?: string;
-  }>;
+// Alternative option types
+
+// type QualificaitonsProps = {
+//   title: string;
+//   data: Array<{
+//     university?: string;
+//     qualification?: string;
+//     years?: string;
+//     company?: string;
+//     role?: string;
+//   }>;
+// };
+
+type QualificaitonsType = {
+  title: string | undefined;
+  data: {
+    company?: string | undefined;
+    role?: string | undefined;
+    university?: string | undefined;
+    qualification?: string | undefined;
+    years?: string | undefined;
+  }[];
 };
 
-const qualificationData: QualificaitonsProps[] = [
+const qualificationData: QualificaitonsType[] = [
   {
     title: "education",
     data: [
@@ -83,8 +96,17 @@ const qualificationData: QualificaitonsProps[] = [
     ],
   },
 ];
+type StaticImport = /*unresolved*/ any;
 
-const skillsData = [
+type SkillsDataType = {
+  title: string;
+  data: {
+    name?: string | undefined;
+    imagePath?: string | StaticImport;
+  }[];
+};
+
+const skillsData: SkillsDataType[] = [
   {
     title: "Skills",
     data: [
@@ -125,9 +147,8 @@ const skillsData = [
 ];
 
 const AboutSection = () => {
-  
-  const getData = (data: QualificaitonsProps[], title: string) => {
-    return data.find((data) => data.title === title);
+  const getData = (arr: QualificaitonsType[], title: string) => {
+    return arr.find((arr) => arr.title === title);
   };
 
   return (
@@ -214,7 +235,7 @@ const AboutSection = () => {
                     <div className="flex flex-col gap-y-6">
                       <div className="flex gap-x-4 items-center text-[22px]text-primary">
                         <Briefcase />
-                        <h4 className="capitalize font-medium">
+                        <h4 className="capitalize font-medium py-2">
                           {getData(qualificationData, "experience")?.title}
                         </h4>
                       </div>
@@ -231,7 +252,7 @@ const AboutSection = () => {
                                     {data.company}
                                   </div>
                                   <div className="text-lg leading-none text-muted-foreground mb-4">
-                                    {data.qualification}
+                                    {data.role}
                                   </div>
                                   <div className="text-base font-medium">
                                     {data.years}
@@ -246,30 +267,27 @@ const AboutSection = () => {
                     <div className="flex flex-col gap-y-6">
                       <div className="flex gap-x-4 items-center text-[22px]text-primary">
                         <Briefcase />
-                        <h4 className="capitalize font-medium">
-                          {qualificationData[0].title}
+                        <h4 className="capitalize font-medium py-2">
+                          {getData(qualificationData, "education")?.title}
                         </h4>
                       </div>
                       <div>
-                        {qualificationData[0].data.map(
-                          ({ company, qualification, years }: any) => {
+                        {getData(qualificationData, "education")?.data.map(
+                          (data, index) => {
                             return (
-                              <div
-                                key={company}
-                                className="flex gap-x-8 group "
-                              >
+                              <div key={index} className="flex gap-x-8 group ">
                                 <div className="h-[84px] w-[1px] bg-border relative ml-2">
                                   <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] translate-all duration-500" />
                                 </div>
                                 <div>
                                   <div className="font-semibold text-xl leading-none mb-2">
-                                    {company}
+                                    {data.university}
                                   </div>
                                   <div className="text-lg leading-none text-muted-foreground mb-4">
-                                    {qualification}
+                                    {data.qualification}
                                   </div>
                                   <div className="text-base font-medium">
-                                    {years}
+                                    {data.years}
                                   </div>
                                 </div>
                               </div>
@@ -295,7 +313,7 @@ const AboutSection = () => {
                               key={index}
                               className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
                             >
-                              <div className="font-medium">no skills</div>
+                              <div className="font-medium">{skill.name}</div>
                             </div>
                           );
                         })}
@@ -306,7 +324,7 @@ const AboutSection = () => {
                           return (
                             <div key={index}>
                               <Image
-                                src={"///"}
+                                src={data.imagePath}
                                 width={48}
                                 height={48}
                                 alt="Logo"
