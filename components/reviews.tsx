@@ -45,28 +45,7 @@ const reviewsData = [
     job: "Chef",
     review:
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aperiam facilis inventore! Deserunt tenetur nisi ut placeat nesciunt animi, enim, magnam labore blanditiis harum aspernatur aliquam voluptate officia, unde minima!",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Romy Sir",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aperiam facilis inventore! Deserunt tenetur nisi ut placeat nesciunt animi, enim, magnam labore blanditiis harum aspernatur aliquam voluptate officia, unde minima!",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Romy Sir",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aperiam facilis inventore! Deserunt tenetur nisi ut placeat nesciunt animi, enim, magnam labore blanditiis harum aspernatur aliquam voluptate officia, unde minima!",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Romy Sir",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam aperiam facilis inventore! Deserunt tenetur nisi ut placeat nesciunt animi, enim, magnam labore blanditiis harum aspernatur aliquam voluptate officia, unde minima!",
-  },
+  }
 ];
 type Props = {};
 
