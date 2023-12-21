@@ -1,5 +1,6 @@
 import Form from "@/components/form";
 import { HomeIcon, MailIcon, PhoneCall } from "lucide-react";
+import { RiWhatsappLine } from "react-icons/ri";
 
 const ContactPage = () => {
   return (
@@ -13,10 +14,8 @@ const ContactPage = () => {
             </div>
             <h1 className="h1 max-w-md mb-8">Hire Me</h1>
             <p className="subtitle max-w-[400px]">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
-              aspernatur est expedita temporibus ullam ipsam rerum molestias,
-              eaque facere. Reiciendis illo, fugit illum qui deserunt tempore?
-              Deleniti ullam nisi tempora?
+              Hello, I am Mahid Lucman if you are interested to me.
+              You can contact by email and whatsapp.
             </p>
           </div>
           <div className="hidden xl:flex w-full bg-contact_illustration_light dark:bg-contact_illustration_dark bg-contain bg-top bg-no-repeat" />
@@ -32,8 +31,8 @@ const ContactPage = () => {
               <div>Philippines</div>
             </div>
             <div className="flex items-center gap-x-8">
-              <PhoneCall size={18} className="text-primary" />
-              <div>+966 56 261 7554</div>
+              <RiWhatsappLine size={18} className="text-primary text-green-700" />
+              <div>+966 55 244 9592</div>
             </div>
           </div>
           <Form/>

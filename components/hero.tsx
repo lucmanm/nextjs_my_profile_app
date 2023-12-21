@@ -23,7 +23,7 @@ const Hero = (props: Props) => {
               in Saudi Arabia
             </p>
             {/* buttons */}
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
+            <div className="flex  gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="">
                 <Button className="gap-x-2">
                   Contact Me <Send size={18} />

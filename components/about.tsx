@@ -170,9 +170,9 @@ const AboutSection = () => {
           {/* Tabs */}
           {/* TODO: Bug on My Journy data */}
           <div className="flex-1">
-            <Tabs>
+            <Tabs defaultValue="skills">
               <TabsList
-                defaultValue="personal"
+                
                 className=" xl:bg-white p-1  rounded-[30px] dark:md:bg-secondary w-full xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none h-[48px]"
               >
                 <TabsTrigger
