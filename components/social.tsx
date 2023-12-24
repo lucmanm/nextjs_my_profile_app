@@ -4,17 +4,13 @@ import React, { FC, ReactNode } from "react";
 import {
   RiFacebookBoxFill,
   RiGithubFill,
-  RiInstagramFill,
   RiLinkedinBoxFill,
-  RiYoutubeFill,
 } from "react-icons/ri";
 
 const icons = [
-  { url: "/youtube.com", name: <RiYoutubeFill /> },
-  { url: "/LinkedIn", name: <RiLinkedinBoxFill /> },
-  { url: "/Github", name: <RiGithubFill /> },
-  { url: "/Facebook", name: <RiFacebookBoxFill /> },
-  { url: "/Instagram", name: <RiInstagramFill /> },
+  { url: "www.linkedin.com/in/lucmanm", name: <RiLinkedinBoxFill className="h-8 w-8 lg:h-12 lg:w-12 hover:text-blue-950" /> },
+  { url: "https://github.com/lucmanm/", name: <RiGithubFill className="h-8 w-8 selection:lg:h-12 lg:w-12 hover:text-blue-950"/> },
+  { url: "https://www.facebook.com/normadz22", name: <RiFacebookBoxFill className="h-8 w-8 lg:h-12 lg:w-12 hover:text-blue-950"/> },
 ];
 
 type IconsProps = {

@@ -85,13 +85,13 @@ const qualificationData: QualificaitonsType[] = [
     data: [
       {
         company: "Computech Company",
-        role: "IT Executive",
+        role: "IT Executive Support",
         years: "2015 - Current",
       },
       {
-        company: "Carmen National High School",
-        role: "High School",
-        years: "2006-2009",
+        company: "IT Support",
+        role: "Asia Pacific, Technical Skills Development Center Inc.",
+        years: "2013-2014",
       },
     ],
   },
@@ -171,10 +171,7 @@ const AboutSection = () => {
           {/* TODO: Bug on My Journy data */}
           <div className="flex-1">
             <Tabs defaultValue="skills">
-              <TabsList
-                
-                className=" xl:bg-white p-1  rounded-[30px] dark:md:bg-secondary w-full xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none h-[48px]"
-              >
+              <TabsList className=" xl:bg-white p-1  rounded-[30px] dark:md:bg-secondary w-full xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none h-[48px]">
                 <TabsTrigger
                   className="rounded-full text-base h-[48px] w-full"
                   value="personal"
@@ -196,19 +193,6 @@ const AboutSection = () => {
               </TabsList>
               <div className="text-lg mt-12 xl:mt-8">
                 <TabsContent value="personal">
-                  <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Amet vero tenetur ratione aperiam, officiis, .
-                    </h3>
-                    <p className="subtitle max-w-xl mx-auto xl:mx-0">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Quas aspernatur ullam excepturi deserunt laborum,
-                      similique officiis animi deleniti nostrum, ab minima iure
-                      nisi qui vel accusamus hic ipsa sunt cumque.
-                    </p>
-                  </div>
-
                   <div className="grid xl:grid-cols-2 gap-4 mb-12 left">
                     {infoData.map(({ icon, text }) => (
                       <div
@@ -223,7 +207,7 @@ const AboutSection = () => {
                   <div className="flex flex-col gap-y-2">
                     <div className="text-primary">Language Skills</div>
                     <div className="border-b border-border" />
-                    <div>English, Filipino</div>
+                    <div>English, Filipino, Arabic</div>
                   </div>
                 </TabsContent>
                 <TabsContent value="qualificaitons">
