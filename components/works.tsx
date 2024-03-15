@@ -8,67 +8,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
+import { projectData } from "@/app/projects/page";
 
 type Props = {};
 
-const projectData = [
-  {
-    image: "/work/1.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/2.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-];
+
 
 const Work = (props: Props) => {
   return (

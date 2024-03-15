@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const ContactUs = () => {
   return (
-    <section>
+    <section className="my-8">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
           <h2 className="h2 max-w-xl text-center mb-8">

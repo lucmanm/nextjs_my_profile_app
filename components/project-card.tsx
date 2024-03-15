@@ -39,7 +39,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
               <Link2Icon className="text-black" />
             </Link>
             <Link
-              href={project.link}
+              href={project.github}
               className="bg-secondary w-[50px] h-[50px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
             >
               <GithubIcon className="text-black" />

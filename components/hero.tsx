@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
               </Link>
             </div>
             <Social
-              containerStyle="flex gap-x-6 mx-auto xl:mx-0"
+              containerStyle="flex gap-x-6 mx-auto xl:mx-0 my-8"
               iconsStyles={
                 "text-foreground text-[22px] hover:text-primary transition-all"
               }
