@@ -108,22 +108,22 @@ type SkillsDataType = {
 
 const skillsData: SkillsDataType[] = [
   {
-    title: "Skills",
+    title: "Advanced Skills",
     data: [
       {
-        name: "HTML",
+        name: "NextJs",
       },
       {
-        name: "Frontend Development",
+        name: "React Query / TansTack",
       },
       {
-        name: "Javscript",
+        name: "Zod",
       },
       {
-        name: "PHP",
+        name: "TypeScript",
       },
       {
-        name: "Backedn Development",
+        name: "Prisma",
       },
     ],
   },
@@ -228,7 +228,7 @@ const AboutSection = () => {
                           (data, index) => {
                             return (
                               <div key={index} className="flex gap-x-8 group ">
-                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
+                                <div className="h-[84px] w-[1px] bg-border relative ml-2">  
                                   <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] translate-all duration-500" />
                                 </div>
                                 <div>

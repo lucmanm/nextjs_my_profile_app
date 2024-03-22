@@ -12,32 +12,34 @@ import { projectData } from "@/app/projects/page";
 
 type Props = {};
 
-
-
-const Work = (props: Props) => {
+const RecentProjects = (props: Props) => {
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div>
-
-          <h2 className="section-title mb-4">Current and Latest Projects</h2>
+            <h2 className="section-title mb-4">Current and Latest Projects</h2>
           </div>
           <Link href="/projects">
-            <Button size="sm" className="rounded-full text-xs lg:text-base">All Projects</Button>
+            <Button
+              size="lg"
+              className="rounded-full bg-primary dark:bg-primary dark:text-accent"
+            >
+              All Projects
+            </Button>
           </Link>
         </div>
 
-        <div className="">
+        <div>
           <Swiper
             className="h-[480px]"
             slidesPerView={1}
-            breakpoints={{ 640: { slidesPerView: 2 } }}
+            breakpoints={{ 640: { slidesPerView: 3 } }}
             spaceBetween={30}
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {/* show only 4 projects */}
+            {/* Slider Recent Projects */}
             {projectData.slice(0.4).map((project) => {
               return (
                 <SwiperSlide key={project.name}>
@@ -52,4 +54,4 @@ const Work = (props: Props) => {
   );
 };
 
-export default Work;
+export default RecentProjects;

@@ -34,15 +34,15 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           <div className="flex gap-x-4">
             <Link
               href={project.link}
-              className="bg-secondary w-[50px] h-[50px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+              className="bg-primary w-[50px] h-[50px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
             >
-              <Link2Icon className="text-black" />
+              <Link2Icon className="text-white dark:hover:bg-slate-100" />
             </Link>
             <Link
               href={project.github}
-              className="bg-secondary w-[50px] h-[50px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
+              className="bg-primary w-[50px] h-[50px] rounded-full flex justify-center items-center scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200"
             >
-              <GithubIcon className="text-black" />
+              <GithubIcon className="text-white dark:hover:bg-slate-100" />
             </Link>
           </div>
         </div>

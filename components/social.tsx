@@ -8,9 +8,24 @@ import {
 } from "react-icons/ri";
 
 const icons = [
-  { url: "www.linkedin.com/in/lucmanm", name: <RiLinkedinBoxFill className="h-8 w-8 lg:h-12 lg:w-12 hover:text-blue-950" /> },
-  { url: "https://github.com/lucmanm/", name: <RiGithubFill className="h-8 w-8 lg:h-12 lg:w-12 hover:text-blue-95"/> },
-  { url: "https://www.facebook.com/normadz22", name: <RiFacebookBoxFill className="h-8 w-8 lg:h-12 lg:w-12 hover:text-blue-950"/> },
+  {
+    url: "http://linkedin.com/in/lucmanm",
+    name: (
+      <RiLinkedinBoxFill className="h-8 w-8 lg:h-12 lg:w-12 " />
+    ),
+  },
+  {
+    url: "https://github.com/lucmanm/",
+    name: (
+      <RiGithubFill className="h-8 w-8 lg:h-12 lg:w-12" />
+    ),
+  },
+  {
+    url: "https://www.facebook.com/normadz22",
+    name: (
+      <RiFacebookBoxFill className="h-8 w-8 lg:h-12 lg:w-12" />
+    ),
+  },
 ];
 
 type IconsProps = {
