@@ -16,6 +16,7 @@ import {
 } from "./ui/card";
 import Image from "next/image";
 import Link from "next/link";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 type DataProps = {
   icon: JSX.Element;
@@ -111,9 +112,12 @@ const Data: DataProps[] = [
 
 const MySkills = () => {
   return (
-    <section className="mb-12 xl:mb-36">
+    <section>
+      <div className="flex items-center justify-center">
+          <RiArrowDownSLine className="text-3xl text-primary " />
+        </div>
       <div className="container mx-auto">
-        <h2 className="section-title mb-12 xl:mb-24 text-center mx-auto">
+        <h2 className="section-title ">
           My Skills
         </h2>
 
@@ -122,38 +126,36 @@ const MySkills = () => {
             return (
               <Card
                 key={id}
-                className="w-full max-w-[424px] flex flex-col pt-16 pb-18 justify-center items-center relative "
+                className="w-full max-w-[424px] flex flex-col pt-16 pb-18 justify-center items-center relative dark:bg-slate-900"
               >
                 <CardHeader className="text-primary absolute -top-[60px]">
-                  <div className="w-[140px] h-[80px] dark:bg-background flex justify-center items-center rounded-full border bg-background text-card-foreground">
+                  <div className="w-[140px] h-[80px]  flex justify-center items-center rounded-full border bg-background text-card-foreground">
                     {data.icon}
                   </div>
                 </CardHeader>
-                <CardContent className="text-center flex flex-col justify-items-start">
+                <CardContent className="text-center flex flex-col justify-items-start ">
                   <CardTitle className="mb-4 ">{data.title}</CardTitle>
                   <CardDescription className="text-lg flex flex-wrap gap-2 justify-center ">
-                    {!!data.skills
-                      ? data.skills?.map((data, id) => {
-                          return (
-                            <Link
-                              href=""
-                              key={id}
-                              className="rounded-lg flex border shadow-sm hover:shadow-inner"
-                            >
-                              <Image
-                                src={data.icon}
-                                alt=""
-                                width={28}
-                                height={28}
-                                className=" rounded-l-lg p-1 overflow-hidden dark:bg-slate-100"
-                              />
-                              <p className="bg-slate-100 rounded-r-lg p-1 px-2 text-blue-950 text-sm lg:text-base font-semibold dark:bg-accent dark:text-slate-100">
-                                {data.name}
-                              </p>
-                            </Link>
-                          );
-                        })
-                      : data.description}
+                    {data.skills?.map((data, id) => {
+                      return (
+                        <Link
+                          href=""
+                          key={id}
+                          className="rounded-lg flex border shadow-sm hover:shadow-inner"
+                        >
+                          <Image
+                            src={data.icon}
+                            alt=""
+                            width={28}
+                            height={28}
+                            className=" rounded-l-lg p-1 overflow-hidden dark:bg-slate-100"
+                          />
+                          <p className="bg-slate-100 rounded-r-lg p-1 px-2 text-blue-950 text-sm lg:text-base font-semibold dark:bg-accent dark:text-slate-100">
+                            {data.name}
+                          </p>
+                        </Link>
+                      );
+                    })}
                   </CardDescription>
                 </CardContent>
               </Card>

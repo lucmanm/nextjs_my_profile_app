@@ -8,13 +8,13 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
-import { projectData } from "@/app/projects/page";
+import { projectData } from "@/app/(route)/projects/page";
 
 type Props = {};
 
 const RecentProjects = (props: Props) => {
   return (
-    <section className="relative mb-12 xl:mb-48">
+    <section className="relative">
       <div className="container mx-auto">
         <div className="flex justify-between">
           <div>

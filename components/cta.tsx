@@ -3,10 +3,10 @@ import { Button } from "./ui/button";
 
 const ContactUs = () => {
   return (
-    <section className="my-8">
+    <section className="mb-8">
       <div className="container mx-auto">
         <div className="flex flex-col items-center">
-          <h2 className="h2 max-w-xl text-center mb-8 dark:text-accent">
+          <h2 className="h2 max-w-xl text-center mb-8 dark:text-slate-100">
             Prepare you ideas into reality. <br />I am Here
           </h2>
           <Link href={"/contact"}>

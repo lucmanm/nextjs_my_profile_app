@@ -10,21 +10,15 @@ import {
 const icons = [
   {
     url: "http://linkedin.com/in/lucmanm",
-    name: (
-      <RiLinkedinBoxFill className="h-8 w-8 lg:h-12 lg:w-12 " />
-    ),
+    name: <RiLinkedinBoxFill className="h-8 w-8 lg:h-12 lg:w-12 " />,
   },
   {
     url: "https://github.com/lucmanm/",
-    name: (
-      <RiGithubFill className="h-8 w-8 lg:h-12 lg:w-12" />
-    ),
+    name: <RiGithubFill className="h-8 w-8 lg:h-12 lg:w-12" />,
   },
   {
     url: "https://www.facebook.com/normadz22",
-    name: (
-      <RiFacebookBoxFill className="h-8 w-8 lg:h-12 lg:w-12" />
-    ),
+    name: <RiFacebookBoxFill className="h-8 w-8 lg:h-12 lg:w-12" />,
   },
 ];
 
@@ -34,17 +28,24 @@ type IconsProps = {
 };
 
 type SocialProps = {
-  containerStyle: string;
-  iconsStyles: string;
+  containerStyle?: string;
+  iconsStyles?: string;
 };
 
 const Social: FC<SocialProps> = ({ containerStyle, iconsStyles }) => {
   return (
-    <div className={cn(containerStyle)}>
+    <div className={cn("flex gap-x-6 mx-auto xl:mx-0 mb-4", containerStyle)}>
       {icons.map(({ url, name }: IconsProps) => {
         return (
           <Link href={url} key={url}>
-            <div className={cn(iconsStyles)}>{name}</div>
+            <div
+              className={cn(
+                "text-primary dark:text-white/70 text-[20px] hover:text-green-500 dark:hover:text-green-500 transition-all ",
+                iconsStyles
+              )}
+            >
+              {name}
+            </div>
           </Link>
         );
       })}

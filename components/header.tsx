@@ -25,7 +25,7 @@ const Header = () => {
   // Error: Navigation in dark mode not clear
   return (
     <header
-      className={` dark:bg-accent ${
+      className={` dark:bg-slate-900 ${
         header
           ? "py-4 bg-white shadow-lg "
           : "py-4 sticky top-0 z-30 transition-all"
