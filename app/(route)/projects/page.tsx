@@ -70,7 +70,7 @@ export const projectData: FilteredProjectsProps[] = [
 
 const selectedCategory = [
   "all projects",
-  ...new Set(projectData.map((item) => item.category)),
+  ...Array.from(new Set(projectData.map((item) => item.category))),
 ];
 
 const ProjectsPage = () => {
