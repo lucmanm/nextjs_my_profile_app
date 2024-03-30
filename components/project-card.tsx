@@ -4,14 +4,25 @@ import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { GithubIcon, Link2Icon } from "lucide-react";
 
-type ProjectDataProps = {
-  image: string;
-  category: string;
-  name: string;
-  description: string;
-  link: string;
-  github: string;
-};
+type ProjectDataProps =
+  | {
+      image: string;
+      category: string;
+      name: string;
+      teckStacks: string[] ;
+      description: string;
+      link: string;
+      github: string;
+    }
+  | {
+      image: string;
+      category: string;
+      name: string;
+      description: string;
+      link: string;
+      github: string;
+      teckStacks?: undefined;
+    };
 
 type ProjectProps = {
   project: ProjectDataProps;
@@ -28,7 +39,7 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
             height={250}
             alt={project.name}
             priority
-            className="absolute bottom-0 shadow-2xl"
+            className="absolute top-10 shadow-2xl rounded-t-lg"
           />
 
           <div className="flex gap-x-4">
@@ -47,10 +58,11 @@ const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
           </div>
         </div>
       </CardHeader>
-      <div className="h-full px-8 py-6">
+      <div className="h-full px-8 py-6 space-y-4">
         <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
           {project.category}
         </Badge>
+
         <h2 className="h-4 mb-1 font-medium">{project.name}</h2>
         <h3 className="text-muted-foreground text-lg  leading-snug min-h-[50px] truncate line-clamp-2">
           {project.description}

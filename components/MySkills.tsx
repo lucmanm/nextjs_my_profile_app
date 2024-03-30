@@ -143,16 +143,17 @@ const MySkills = () => {
                           key={id}
                           className="rounded-lg flex border shadow-sm hover:shadow-inner"
                         >
+
                           <Image
                             src={data.icon}
                             alt=""
                             width={28}
                             height={28}
                             className=" rounded-l-lg p-1 overflow-hidden dark:bg-slate-100"
-                          />
-                          <p className="bg-slate-100 rounded-r-lg p-1 px-2 text-blue-950 text-sm lg:text-base font-semibold dark:bg-accent dark:text-slate-100">
+                            />
+                          <span className="bg-slate-100 rounded-r-lg p-1 px-2 text-blue-950 text-sm lg:text-base font-semibold dark:bg-accent dark:text-slate-100">
                             {data.name}
-                          </p>
+                          </span>
                         </Link>
                       );
                     })}

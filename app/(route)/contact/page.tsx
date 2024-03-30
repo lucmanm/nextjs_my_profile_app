@@ -5,7 +5,7 @@ import { RiWhatsappLine } from "react-icons/ri";
 const ContactPage = () => {
   return (
     <section>
-      <div className="container mx-auto dark:text-accent">
+      <div className="container mx-auto dark:text-slate-100">
         <div className="grid xl:grid-cols-2 pt-12 xl:h-[480px] mb-6 xl:mb-24">
           <div className="flex flex-col justify-center">
             <div className="flex items-center gap-x-4 text-primary text-lg mb-4">
