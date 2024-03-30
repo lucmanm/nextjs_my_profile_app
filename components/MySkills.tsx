@@ -133,8 +133,8 @@ const MySkills = () => {
                     {data.icon}
                   </div>
                 </CardHeader>
-                <CardContent className="text-center flex flex-col justify-items-start ">
-                  <CardTitle className="mb-4 ">{data.title}</CardTitle>
+                <CardContent className="flex flex-col">
+                  <CardTitle className="mb-4 text-center">{data.title}</CardTitle>
                   <CardDescription className="text-lg flex flex-wrap gap-2 justify-center ">
                     {data.skills?.map((data, id) => {
                       return (

@@ -14,11 +14,11 @@ import Badge from "./badge";
 
 const Hero = () => {
   return (
-    <section>
+    <section className="py-8">
       <div className="container max-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left dark:text-slate-100">
-            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px] dark:text-slate-100">
+            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px] dark:text-slate-100 pl-2">
               Graphic Design | Web Developer
             </div>
             <h1 className="h1 mb-4">Helo, My Name is Mahid, Lucman</h1>
