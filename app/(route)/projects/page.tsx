@@ -4,16 +4,25 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/project-card";
 
-type FilteredProjectsProps ={
+type FilteredProjectsProps =
+  | {
       image: string;
       category: string;
       name: string;
-      teckStacks: string[] 
+      teckStacks: string[];
       description: string;
       link: string;
       github: string;
     }
-
+  | {
+      image: string;
+      category: string;
+      name: string;
+      description: string;
+      link: string;
+      github: string;
+      teckStacks?: undefined;
+    };
 
 export const projectData = [
   {
@@ -62,7 +71,7 @@ export const projectData = [
   },
 ];
 
-const selectedCategory = [
+const selectedCategory: string[] = [
   "all projects",
   ...new Set(projectData.map((item) => item.category)),
 ];
