@@ -3,73 +3,17 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/project-card";
+import { projectData } from "@/lib/data/projects";
 
-type FilteredProjectsProps =
-  | {
-      image: string;
-      category: string;
-      name: string;
-      teckStacks: string[];
-      description: string;
-      link: string;
-      github: string;
-    }
-  | {
-      image: string;
-      category: string;
-      name: string;
-      description: string;
-      link: string;
-      github: string;
-      teckStacks?: undefined;
-    };
-
-export const projectData = [
-  {
-    image: "/work/computech-front.png",
-    category: "Next js",
-    name: "Computech",
-    teckStacks: ["React", "Prisma", "ReactQuery"],
-    description: "Electronics store from Jeddah, Saudi Arabia",
-    link: "https://www.compu-tech.com.sa",
-    github: "https://github.com/lucmanm/nextjs_ecommerce_computech_app",
-  },
-  {
-    image: "/work/2.png",
-    category: "Next js",
-    name: "Nexa Website",
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/3.png",
-    category: "laravel",
-    name: "Nexa Website",
-    teckStacks: ["React", "Prisma", "ReactQuery"],
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "Javascript",
-    name: "Nexa Website",
-    teckStacks: ["React", "Prisma", "ReactQuery"],
-    description: "Loren Epsum dolores",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "Expo ",
-    name: "Movie App",
-    teckStacks: ["React", "Prisma", "ReactQuery"],
-    description: "Movie Application with Create, Read, Update, Delete",
-    link: "/",
-    github: "/",
-  },
-];
+type FilteredProjectsProps = {
+  image: string;
+  category: string;
+  name: string;
+  teckStacks?: string[];
+  description: string;
+  link: string;
+  github: string;
+};
 
 const selectedCategory: string[] = [
   "all projects",

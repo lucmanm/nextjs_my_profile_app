@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
-import { projectData } from "@/app/(route)/projects/page";
+import { projectData } from "@/lib/data/projects";
 
 
 const RecentProjects = () => {

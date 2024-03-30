@@ -1,0 +1,47 @@
+
+export const projectData = [
+    {
+      image: "/work/computech-front.png",
+      category: "Next js",
+      name: "Computech",
+      teckStacks: ["React", "Prisma", "ReactQuery"],
+      description: "Electronics store from Jeddah, Saudi Arabia",
+      link: "https://www.compu-tech.com.sa",
+      github: "https://github.com/lucmanm/nextjs_ecommerce_computech_app",
+    },
+    {
+      image: "/work/2.png",
+      category: "Next js",
+      name: "Nexa Website",
+      description: "Loren Epsum dolores",
+      link: "/",
+      github: "/",
+    },
+    {
+      image: "/work/3.png",
+      category: "laravel",
+      name: "Nexa Website",
+      teckStacks: ["React", "Prisma", "ReactQuery"],
+      description: "Loren Epsum dolores",
+      link: "/",
+      github: "/",
+    },
+    {
+      image: "/work/4.png",
+      category: "Javascript",
+      name: "Nexa Website",
+      teckStacks: ["React", "Prisma", "ReactQuery"],
+      description: "Loren Epsum dolores",
+      link: "/",
+      github: "/",
+    },
+    {
+      image: "/work/4.png",
+      category: "Expo ",
+      name: "Movie App",
+      teckStacks: ["React", "Prisma", "ReactQuery"],
+      description: "Movie Application with Create, Read, Update, Delete",
+      link: "/",
+      github: "/",
+    },
+  ];

@@ -4,25 +4,15 @@ import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { GithubIcon, Link2Icon } from "lucide-react";
 
-type ProjectDataProps =
-  | {
-      image: string;
-      category: string;
-      name: string;
-      teckStacks: string[] ;
-      description: string;
-      link: string;
-      github: string;
-    }
-  | {
-      image: string;
-      category: string;
-      name: string;
-      description: string;
-      link: string;
-      github: string;
-      teckStacks?: undefined;
-    };
+type ProjectDataProps = {
+  image: string;
+  category: string;
+  name: string;
+  teckStacks?: string[];
+  description: string;
+  link: string;
+  github: string;
+};
 
 type ProjectProps = {
   project: ProjectDataProps;
