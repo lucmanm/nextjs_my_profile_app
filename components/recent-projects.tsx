@@ -10,9 +10,8 @@ import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
 import { projectData } from "@/app/(route)/projects/page";
 
-type Props = {};
 
-const RecentProjects = (props: Props) => {
+const RecentProjects = () => {
   return (
     <section className="relative">
       <div className="container mx-auto">

@@ -4,27 +4,18 @@ import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/project-card";
 
-type FilteredProjectsProps =
-  | {
+type FilteredProjectsProps ={
       image: string;
       category: string;
       name: string;
-      teckStacks: string[];
+      teckStacks: string[] 
       description: string;
       link: string;
       github: string;
     }
-  | {
-      image: string;
-      category: string;
-      name: string;
-      description: string;
-      link: string;
-      github: string;
-      teckStacks?: undefined;
-    };
 
-export const projectData: FilteredProjectsProps[] = [
+
+export const projectData = [
   {
     image: "/work/computech-front.png",
     category: "Next js",
@@ -46,6 +37,7 @@ export const projectData: FilteredProjectsProps[] = [
     image: "/work/3.png",
     category: "laravel",
     name: "Nexa Website",
+    teckStacks: ["React", "Prisma", "ReactQuery"],
     description: "Loren Epsum dolores",
     link: "/",
     github: "/",
@@ -54,6 +46,7 @@ export const projectData: FilteredProjectsProps[] = [
     image: "/work/4.png",
     category: "Javascript",
     name: "Nexa Website",
+    teckStacks: ["React", "Prisma", "ReactQuery"],
     description: "Loren Epsum dolores",
     link: "/",
     github: "/",
@@ -62,6 +55,7 @@ export const projectData: FilteredProjectsProps[] = [
     image: "/work/4.png",
     category: "Expo ",
     name: "Movie App",
+    teckStacks: ["React", "Prisma", "ReactQuery"],
     description: "Movie Application with Create, Read, Update, Delete",
     link: "/",
     github: "/",
@@ -70,7 +64,7 @@ export const projectData: FilteredProjectsProps[] = [
 
 const selectedCategory = [
   "all projects",
-  ...Array.from(new Set(projectData.map((item) => item.category))),
+  ...new Set(projectData.map((item) => item.category)),
 ];
 
 const ProjectsPage = () => {
