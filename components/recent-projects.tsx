@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./ui/button";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -9,6 +8,8 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
 import { projectData } from "@/lib/data/projects";
+import CustomizedButton from "./ui/customized-button";
+import { ArrowRight } from "lucide-react";
 
 
 const RecentProjects = () => {
@@ -20,12 +21,7 @@ const RecentProjects = () => {
             <h2 className="section-title mb-4">Current and Latest Projects</h2>
           </div>
           <Link href="/projects">
-            <Button
-              size="lg"
-              className="rounded-full bg-primary dark:bg-primary dark:text-accent"
-            >
-              All Projects
-            </Button>
+            <CustomizedButton name="All Projects" icon={<ArrowRight size={18}/>}/>
           </Link>
         </div>
 

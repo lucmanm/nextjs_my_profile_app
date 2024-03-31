@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { Button } from "./ui/button";
+import CustomizedButton from "./ui/customized-button";
+import { RiWhatsappFill } from "react-icons/ri";
 
 const ContactUs = () => {
   return (
@@ -10,12 +12,12 @@ const ContactUs = () => {
             Prepare you ideas into reality. <br />I am Here
           </h2>
           <Link href={"/contact"}>
-            <Button
+            <CustomizedButton
+              name="Contact Me"
+              icon={<RiWhatsappFill size={18} />}
               size="lg"
-              className="rounded-full dark:bg-accent text-slate-100"
-            >
-              Contact Me
-            </Button>
+              className="text-lg bg-green-500"
+            />
           </Link>
         </div>
       </div>

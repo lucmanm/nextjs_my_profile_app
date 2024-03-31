@@ -11,6 +11,7 @@ import { Download } from "lucide-react";
 import Social from "./social";
 import DivImg from "./div-img";
 import Badge from "./badge";
+import CustomizedButton from "./ui/customized-button";
 
 const Hero = () => {
   return (
@@ -29,14 +30,18 @@ const Hero = () => {
             {/* buttons */}
             <div className="flex  gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="https://wa.me/00966552449592">
-                <Button className="gap-x-2 bg-green-500">
-                  Contact Me <RiWhatsappFill size={18} />
-                </Button>
+               
+                <CustomizedButton
+                className="bg-green-500"
+                  name="Contact Me"
+                  icon={<RiWhatsappFill size={18} />}
+                />
               </Link>
               <Link href="">
-                <Button className="gap-x-2" variant="secondary">
-                  Download CV <Download size={18} />
-                </Button>
+                <CustomizedButton
+                  name="Download CV"
+                  icon={<Download size={18} />}
+                />
               </Link>
             </div>
             <Social
