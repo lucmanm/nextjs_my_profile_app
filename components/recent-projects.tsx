@@ -11,7 +11,6 @@ import { projectData } from "@/lib/data/projects";
 import CustomizedButton from "./ui/customized-button";
 import { ArrowRight } from "lucide-react";
 
-
 const RecentProjects = () => {
   return (
     <section className="relative">
@@ -21,7 +20,10 @@ const RecentProjects = () => {
             <h2 className="section-title mb-4">Current and Latest Projects</h2>
           </div>
           <Link href="/projects">
-            <CustomizedButton name="All Projects" icon={<ArrowRight size={18}/>}/>
+            <CustomizedButton
+              name="All Projects"
+              icon={<ArrowRight size={18} />}
+            />
           </Link>
         </div>
 

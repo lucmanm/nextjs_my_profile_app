@@ -114,44 +114,43 @@ const MySkills = () => {
   return (
     <section>
       <div className="flex items-center justify-center">
-          <RiArrowDownSLine className="text-3xl text-primary " />
-        </div>
+        <RiArrowDownSLine className="text-3xl text-primary " />
+      </div>
       <div className="container mx-auto">
-        <h2 className="section-title ">
-          My Skills
-        </h2>
+        <h2 className="section-title ">My Skills</h2>
 
-        <div className="grid xl:grid-cols-3 justify-center gap-y-12 xl:gap-y-24 xl:gap-x-8">
+        <div className="grid justify-center gap-y-12 xl:grid-cols-3 xl:gap-x-8 xl:gap-y-24">
           {Data.map((data, id) => {
             return (
               <Card
                 key={id}
-                className="w-full max-w-[424px] flex flex-col pt-16 pb-18 justify-center items-center relative dark:bg-slate-900"
+                className="pb-18 relative flex w-full max-w-[424px] flex-col items-center justify-center bg-slate-100/30 pt-16 backdrop-blur-lg dark:bg-slate-900/60 dark:backdrop-blur-md"
               >
-                <CardHeader className="text-primary absolute -top-[60px]">
-                  <div className="w-[140px] h-[80px]  flex justify-center items-center rounded-full border bg-background text-card-foreground">
+                <CardHeader className="absolute -top-[60px] text-primary ">
+                  <div className="flex h-[80px] w-[140px] items-center justify-center rounded-full border bg-slate-100/30 text-card-foreground backdrop-blur-sm ">
                     {data.icon}
                   </div>
                 </CardHeader>
                 <CardContent className="flex flex-col">
-                  <CardTitle className="mb-4 text-center">{data.title}</CardTitle>
-                  <CardDescription className="text-lg flex flex-wrap gap-2 justify-center ">
+                  <CardTitle className="mb-4 text-center">
+                    {data.title}
+                  </CardTitle>
+                  <CardDescription className="flex flex-wrap justify-center gap-2 text-lg ">
                     {data.skills?.map((data, id) => {
                       return (
                         <Link
                           href=""
                           key={id}
-                          className="rounded-lg flex border shadow-sm hover:shadow-inner"
+                          className="flex rounded-lg border shadow-sm hover:shadow-inner "
                         >
-
                           <Image
                             src={data.icon}
                             alt=""
                             width={28}
                             height={28}
-                            className=" rounded-l-lg p-1 overflow-hidden dark:bg-slate-100"
-                            />
-                          <span className="bg-slate-100 rounded-r-lg p-1 px-2 text-blue-950 text-sm lg:text-base font-semibold dark:bg-accent dark:text-slate-100">
+                            className=" overflow-hidden rounded-l-lg p-1 dark:bg-slate-100"
+                          />
+                          <span className="rounded-r-lg bg-slate-100/30 backdrop-blur-sm p-1 px-2 text-sm font-semibold text-blue-950 dark:bg-accent dark:text-slate-100 lg:text-base">
                             {data.name}
                           </span>
                         </Link>
