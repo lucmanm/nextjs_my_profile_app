@@ -7,9 +7,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
-import { projectData } from "@/lib/data/projects";
 import CustomizedButton from "./ui/customized-button";
 import { ArrowRight } from "lucide-react";
+import { projectData } from "@/lib/const-data";
 
 const RecentProjects = () => {
   return (

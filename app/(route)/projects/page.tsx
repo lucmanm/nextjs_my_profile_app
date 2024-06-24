@@ -3,17 +3,8 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/project-card";
-import { projectData } from "@/lib/data/projects";
+import { projectData } from "@/lib/const-data";
 
-type FilteredProjectsProps = {
-  image: string;
-  category: string;
-  name: string;
-  teckStacks?: string[];
-  description: string;
-  link: string;
-  github: string;
-};
 
 const selectedCategory: string[] = [
   "all projects",
@@ -24,7 +15,7 @@ const ProjectsPage = () => {
   const [categoryData] = useState<string[]>(selectedCategory);
   const [category, setcategory] = useState<string>("all projects");
 
-  const filteredProjects: FilteredProjectsProps[] = projectData.filter(
+  const filteredProjects = projectData.filter(
     (project) => {
       // If category is All preojcts
       return category === "all projects"

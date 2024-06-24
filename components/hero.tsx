@@ -30,14 +30,14 @@ const Hero = () => {
             {/* buttons */}
             <div className="flex  gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
               <Link href="https://wa.me/00966552449592">
-               
+
                 <CustomizedButton
                 className="bg-green-500"
                   name="Contact Me"
                   icon={<RiWhatsappFill size={18} />}
                 />
               </Link>
-              <Link href="">
+              <Link href="https://drive.google.com/file/d/17TueKt65XnUK3xh8i69redf74CneXp5J/view?usp=sharing">
                 <CustomizedButton
                   name="Download CV"
                   icon={<Download size={18} />}
