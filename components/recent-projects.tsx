@@ -9,9 +9,10 @@ import { Pagination } from "swiper/modules";
 import ProjectCard from "./project-card";
 import CustomizedButton from "./ui/customized-button";
 import { ArrowRight } from "lucide-react";
-import { projectData } from "@/lib/const-data";
+import { personalData } from "@/lib/const-data";
 
 const RecentProjects = () => {
+  const {projects} = personalData[0]
   return (
     <section className="relative">
       <div className="container mx-auto">
@@ -37,7 +38,7 @@ const RecentProjects = () => {
             pagination={{ clickable: true }}
           >
             {/* Slider Recent Projects */}
-            {projectData.slice(0.4).map((project) => {
+            {projects.slice(0.4).map((project) => {
               return (
                 <SwiperSlide key={project.name}>
                   <ProjectCard project={project} />

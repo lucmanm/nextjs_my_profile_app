@@ -16,23 +16,22 @@ import CustomizedButton from "./ui/customized-button";
 const Hero = () => {
   return (
     <section className="py-8">
-      <div className="container max-auto">
-        <div className="flex flex-col lg:flex-row justify-between gap-x-8">
-          <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left dark:text-slate-100">
-            <div className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px] dark:text-slate-100 pl-2">
+      <div className="max-auto container">
+        <div className="flex flex-col justify-between gap-x-8 lg:flex-row">
+          <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center dark:text-slate-100 xl:mx-0 xl:text-left">
+            <div className="mb-4 pl-2 text-sm font-semibold uppercase tracking-[4px] text-primary dark:text-slate-100">
               Graphic Design | Web Developer
             </div>
             <h1 className="h1 mb-4">Helo, My Name is Mahid, Lucman</h1>
-            <p className="subtitle max-w-[490] mx-auto xl:mx-0">
-              I am currently working as a IT Support in Computech Company in
-              Saudi Arabia
+            <p className="subtitle mx-auto max-w-[490] xl:mx-0">
+              Freelance, Software Engineer, Web & Mobile Developer, Graphic
+              Designer, Technical Support
             </p>
             {/* buttons */}
-            <div className="flex  gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
+            <div className="mx-auto  mb-12 flex gap-x-3 gap-y-3 md:flex-row xl:mx-0">
               <Link href="https://wa.me/00966552449592">
-
                 <CustomizedButton
-                className="bg-green-500"
+                  className="bg-green-500"
                   name="Contact Me"
                   icon={<RiWhatsappFill size={18} />}
                 />
@@ -52,7 +51,7 @@ const Hero = () => {
             />
           </div>
           {/* Image */}
-          <div className="xl:flex relative">
+          <div className="relative xl:flex">
             {/* Badge Experince */}
             <Badge
               containerStyles="absolute top-[24%] -left-[1rem] dark:text-slate-100 dark:bg-accent"
@@ -74,7 +73,7 @@ const Hero = () => {
               endCountNum={100}
               badgeText="Happy Clients"
             />
-            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] bg-no-repeat absolute -top-1 -right-2 h-[500px]" />
+            <div className="absolute -right-2 -top-1 h-[500px] w-[500px] bg-hero_shape2_light bg-no-repeat dark:bg-hero_shape2_dark" />
             <DivImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom "
               imgSrc="/hero/MySelftwo.png"

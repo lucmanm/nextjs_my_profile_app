@@ -3,19 +3,23 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import ProjectCard from "@/components/project-card";
-import { projectData } from "@/lib/const-data";
+import { personalData } from "@/lib/const-data";
 
 
-const selectedCategory: string[] = [
-  "all projects",
-  ...new Set(projectData.map((item) => item.category)),
-];
+
 
 const ProjectsPage = () => {
+  const {projects} = personalData[0]
+
+  const selectedCategory: string[] = [
+    "all projects",
+    ...new Set(projects.map((item) => item.category)),
+  ];
+
   const [categoryData] = useState<string[]>(selectedCategory);
   const [category, setcategory] = useState<string>("all projects");
 
-  const filteredProjects = projectData.filter(
+  const filteredProjects = projects.filter(
     (project) => {
       // If category is All preojcts
       return category === "all projects"

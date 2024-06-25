@@ -14,11 +14,8 @@ type ProjectDataProps = {
   github: string;
 };
 
-type ProjectProps = {
-  project: ProjectDataProps;
-};
 
-const ProjectCard: React.FC<ProjectProps> = ({ project }) => {
+const ProjectCard = ({ project }: {project: ProjectDataProps} ) => {
   return (
     <Card className="group relative overflow-hidden bg-slate-100/30 backdrop-blur-2xl">
       <CardHeader className="p-0">
