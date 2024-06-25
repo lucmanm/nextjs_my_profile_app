@@ -1,9 +1,10 @@
 import {
-  RiBriefcase4Fill,
-  RiProjectorFill,
-  RiTeamFill,
-  RiWhatsappFill,
+  RiFacebookBoxFill,
+  RiGithubFill,
+  RiLinkedinBoxFill,
 } from "react-icons/ri";
+export const category = ["React", "Nextjs", "Laravel"] as const
+
 
 export const personalData = [
   {
@@ -28,8 +29,8 @@ export const personalData = [
     ],
     projects: [
       {
-        image: "/work/computech-front.png",
-        category: "Next js",
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719349323/playground-images/fpwdfyznf8dg9ydms25t.png",
+        category: "Nextjs",
         name: "Computech",
         teckStacks: ["React", "Prisma", "ReactQuery"],
         description: "Electronics store from Jeddah, Saudi Arabia",
@@ -38,8 +39,8 @@ export const personalData = [
         status: "live"
       },
       {
-        image: "/work/2.png",
-        category: "Next js",
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719348904/playground-images/ngyaydn7cxjo6nqsusfm.png",
+        category: "Nextjs",
         name: "Playground",
         description: "All I keep my web development and test applications",
         link: "https://playground-hazel-six.vercel.app/",
@@ -47,8 +48,8 @@ export const personalData = [
         status: "live"
       },
       {
-        image: "/work/3.png",
-        category: "Next js",
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719349482/playground-images/wvimal6gfwu5rskokrxu.png",
+        category: "Nextjs",
         name: "Admin Dashboard",
         teckStacks: ["Next js"],
         description: "A Simple frontend application admin dashboard contains basic react usage",
@@ -57,9 +58,9 @@ export const personalData = [
         status: "live"
       },
       {
-        image: "/work/4.png",
-        category: "Next js",
-        name: "Nexa Website",
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719349859/playground-images/y39puqw86jyr9grtje6j.png",
+        category: "Nextjs",
+        name: "Cars Showcase",
         teckStacks: ["Next js"],
         description: "Simplete project about car data is fetch from rest api cars",
         link: "https://next-project-car-showcase.vercel.app/",
@@ -75,6 +76,36 @@ export const personalData = [
         link: "projects-app-tau.vercel.app",
         github: "https://github.com/lucmanm/nextjs_projects_app",
         status: "live"
+      },
+      {
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719352149/playground-images/idexcnzldtq5tf2bfcbv.png",
+        category: "React",
+        name: "React Chat App",
+        teckStacks: ["React js"],
+        description: "Excercise application about Chat App ",
+        link: "/",
+        github: "https://github.com/lucmanm/react-chat-app",
+        status: "no"
+      },
+      {
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719352147/playground-images/y7dybaoj2kazpvd3zvxs.png",
+        category: "React",
+        name: "Note App",
+        teckStacks: ["React"],
+        description: "Excercise application about basic Note App CRUD functions  ",
+        link: "/",
+        github: "https://github.com/lucmanm/reactjs_notes",
+        status: "no"
+      },
+      {
+        image: "/work/4.png",
+        category: "Laravel",
+        name: "No Data",
+        teckStacks: ["Laravel"],
+        description: "Excercise application ",
+        link: "/",
+        github: "",
+        status: "no"
       },
     ]
   }

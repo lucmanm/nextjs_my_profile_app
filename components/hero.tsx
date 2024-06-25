@@ -12,8 +12,11 @@ import Social from "./social";
 import DivImg from "./div-img";
 import Badge from "./badge";
 import CustomizedButton from "./ui/customized-button";
+import { personalData } from "@/lib/const-data";
 
 const Hero = () => {
+  const { socialMedia } = personalData[0];
+
   return (
     <section className="py-8">
       <div className="max-auto container">
