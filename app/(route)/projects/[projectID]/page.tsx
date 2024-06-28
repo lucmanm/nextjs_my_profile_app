@@ -7,7 +7,6 @@ const Project = ({ params }: { params: { projectID: string } }) => {
   const { projectID } = params;
   const decodedProjectID = decodeURIComponent(projectID);
   const { projects } = personalData[0];
-  console.log(decodedProjectID);
 
   const project = projects.find(
     (project) => project.description === decodedProjectID,
