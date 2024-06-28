@@ -3,6 +3,7 @@ import { Badge } from "./ui/badge";
 import { Card, CardHeader } from "./ui/card";
 import Image from "next/image";
 import { GithubIcon, Link2Icon } from "lucide-react";
+import {  useRouter } from "next/navigation";
 
 type ProjectDataProps = {
   image: string;
@@ -14,16 +15,23 @@ type ProjectDataProps = {
   github: string;
 };
 
+const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
+  const router = useRouter();
+  const directUrl = () => {
+    router.push(`/projects/${project.description}`);
+  };
 
-const ProjectCard = ({ project }: {project: ProjectDataProps} ) => {
   return (
-    <Card className="group relative overflow-hidden bg-slate-100/30 backdrop-blur-2xl">
+    <Card
+      className="group relative overflow-hidden bg-slate-100/30 backdrop-blur-2xl hover:cursor-pointer"
+      onClick={directUrl}
+    >
       <CardHeader className="p-0">
-        <div className="bg-tertiary relative flex h-[300px] w-full items-center justify-center overflow-hidden dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat xl:dark:bg-accent">
+        <div className="bg-tertiary relative flex h-[200px] w-full items-center justify-center overflow-hidden dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat xl:dark:bg-accent">
           <Image
             src={project.image}
-            width={247}
-            height={250}
+            width={350}
+            height={200}
             alt={project.name}
             priority
             className="absolute top-10 rounded-t-lg shadow-2xl"
@@ -51,7 +59,7 @@ const ProjectCard = ({ project }: {project: ProjectDataProps} ) => {
         </Badge>
 
         <h2 className="mb-1 h-4 font-medium">{project.name}</h2>
-        <h3 className="line-clamp-2 min-h-[50px]  truncate text-sm leading-snug font-semibold text-muted-foreground text-slate-900">
+        <h3 className="line-clamp-2 min-h-[50px]  truncate text-sm font-semibold leading-snug text-muted-foreground text-slate-900">
           {project.description}
         </h3>
       </div>

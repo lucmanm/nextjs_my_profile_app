@@ -74,13 +74,13 @@
     @apply bg-background bg-slate-100 text-foreground;
   }
   .h1 {
-    @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
+    @apply text-xl font-bold tracking-[-2px] xl:text-5xl xl:leading-[80px];
   }
   .h2 {
-    @apply text-4xl font-bold;
+    @apply text-base md:text-2xl  font-normal;
   }
   .h3 {
-    @apply text-3xl font-bold;
+    @apply text-sm md:text-xl font-normal;
   }
   .h4 {
     @apply text-[22px] font-semibold;
@@ -88,7 +88,7 @@
 }
 
 .subtitle {
-  @apply mb-8 text-xs font-medium text-muted-foreground lg:text-lg text-slate-800;
+  @apply mb-8 text-xs font-medium text-muted-foreground text-slate-800 lg:text-lg;
 }
 
 .section-title {
