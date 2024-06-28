@@ -77,13 +77,25 @@
     @apply text-xl font-bold tracking-[-2px] xl:text-5xl xl:leading-[80px];
   }
   .h2 {
-    @apply text-base md:text-2xl  font-normal;
+    @apply text-base font-normal  md:text-2xl;
   }
   .h3 {
-    @apply text-sm md:text-xl font-normal;
+    @apply text-sm font-normal md:text-xl;
   }
   .h4 {
     @apply text-[22px] font-semibold;
+  }
+  .p {
+    @apply px-2 py-0.5 text-xs  md:text-sm lg:text-base;
+  }
+}
+
+@layer components {
+  .icon {
+    @apply h-6 w-6 rounded-full bg-slate-950 p-1 text-sky-100 md:h-8 md:w-8 md:p-1.5;
+  }
+  .span {
+    @apply px-2 py-0.5 text-xs text-slate-100 dark:text-white md:text-sm lg:text-base;
   }
 }
 
