@@ -20,7 +20,7 @@ const Template: React.FC<TemplateProps> = ({ children }) => {
         initial="hidden"
         animate="enter"
         transition={{ type: "linear", delay: 0.2, duration: 0.4 }}
-        className="dark:bg-background border"
+        className="dark:bg-background h-screen"
       >
         {children}
       </motion.main>

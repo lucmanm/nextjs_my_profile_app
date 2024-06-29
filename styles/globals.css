@@ -74,19 +74,25 @@
     @apply bg-background bg-slate-100 text-foreground;
   }
   .h1 {
-    @apply text-xl font-bold tracking-[-2px] xl:text-5xl xl:leading-[80px];
+    @apply text-slate-950 dark:text-slate-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold;
   }
   .h2 {
-    @apply text-base font-normal  md:text-2xl;
+    @apply text-slate-950 dark:text-slate-100 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl;
   }
   .h3 {
-    @apply text-sm font-normal md:text-xl;
+    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl
   }
   .h4 {
-    @apply text-[22px] font-semibold;
+    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl
+  }
+  .h5 {
+    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg
+  }
+  .h6 {
+    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base;
   }
   .p {
-    @apply px-2 py-0.5 text-xs  md:text-sm lg:text-base;
+    @apply text-slate-950 dark:text-slate-100 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-lg
   }
 }
 
@@ -95,7 +101,7 @@
     @apply h-6 w-6 rounded-full bg-slate-950 p-1 text-sky-100 md:h-8 md:w-8 md:p-1.5;
   }
   .span {
-    @apply px-2 py-0.5 text-xs text-slate-100 dark:text-white md:text-sm lg:text-base;
+    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl;
   }
 }
 

@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${outfit.className} bg-gradient-to-r from-teal-400 to-yellow-200 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700 `}
+        className={`${outfit.className} bg-gradient-to-r from-teal-400 to-yellow-200 dark:bg-gradient-to-r dark:from-slate-900 dark:to-slate-700`}
       >
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
