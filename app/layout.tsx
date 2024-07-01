@@ -1,6 +1,7 @@
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "styles/globals.css";
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>
