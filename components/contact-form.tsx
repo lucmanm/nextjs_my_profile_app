@@ -9,13 +9,15 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { contactFormSchema } from "@/lib/validation";
 import { z } from "zod";
 import { useToast } from "@/components/ui/use-toast";
+import { sendEmail } from "@/app/(route)/contact/_resend";
 
 export const ContactForm = () => {
   const { toast } = useToast();
   const {
     register,
     handleSubmit,
-    formState: { errors,isLoading },
+    reset,
+    formState: { errors,isSubmitting },
   } = useForm<z.infer<typeof contactFormSchema>>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -30,18 +32,13 @@ export const ContactForm = () => {
     data,
   ) => {
     try {
-      await fetch("/api/send", {
-        method: "POST",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      await sendEmail(data)
       toast({
         variant: "success",
         title: "Thank you",
         description: "I will contact you once i reach your message.",
       });
+      reset()
     } catch (error) {
       toast({
         variant: "destructive",
@@ -50,6 +47,8 @@ export const ContactForm = () => {
       });
     }
   };
+
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-y-4">
@@ -114,7 +113,7 @@ export const ContactForm = () => {
       )}
       <Button
       type="submit"
-      disabled= {isLoading}
+      disabled= {isSubmitting}
       className="flex max-w-[166px] items-center gap-x-4">
         Send <Send size={20} />
       </Button>
