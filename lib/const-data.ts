@@ -108,6 +108,7 @@ export const personalData = [
         github: "",
         isPublished: false
       },
+
     ]
   }
 ] as const;

@@ -62,6 +62,10 @@ const Data: DataProps[] = [
         name: "NextJS",
         icon: "/skillsIcons/Nextjs.png",
       },
+      {
+        name: "Framer Motion",
+        icon: "/skillsIcons/framer.png",
+      },
     ],
   },
   {
