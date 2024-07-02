@@ -148,7 +148,7 @@ const MySkills = () => {
                             alt=""
                             width={28}
                             height={28}
-                            className=" overflow-hidden rounded-l-lg p-1 dark:bg-slate-100"
+                            className=" overflow-hidden rounded-l-lg p-1 dark:bg-slate-100 object-contain"
                           />
                           <span className="rounded-r-lg bg-slate-100/30 backdrop-blur-sm p-1 px-2 text-sm font-semibold text-blue-950 dark:bg-accent dark:text-slate-100 lg:text-base">
                             {data.name}

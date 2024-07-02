@@ -19,9 +19,9 @@ const Hero = () => {
 
   return (
     <section className="py-8">
-      <div className="max-auto container">
+      <div className="max-auto md:container">
         <div className="flex flex-col justify-between gap-x-8 lg:flex-row">
-          <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center dark:text-slate-100 xl:mx-0 xl:text-left">
+          <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left dark:text-slate-100">
             <div className="mb-4 pl-2 text-sm font-semibold uppercase tracking-[4px] text-primary dark:text-slate-100">
               Graphic Design | Web Developer
             </div>
@@ -54,32 +54,32 @@ const Hero = () => {
             />
           </div>
           {/* Image */}
-          <div className="relative xl:flex">
+          <div className="relative overflow-hidden md:overflow-visible xl:flex">
             {/* Badge Experince */}
             <Badge
-              containerStyles="absolute top-[24%] -left-[1rem] dark:text-slate-100 dark:bg-accent"
+              containerStyles="absolute left-3  top-[15%] md:top-[24%] md:-left-[1rem] dark:text-slate-100 dark:bg-accent"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Years of Experience"
             />
             {/* Badge  Projects*/}
             <Badge
-              containerStyles="absolute top-[80%] -left-[1rem]  dark:text-slate-100 dark:bg-accent"
+              containerStyles="absolute left-14 top-[70%] md:top-[80%]  md:-left-[1rem]  dark:text-slate-100 dark:bg-accent"
               icon={<RiProjectorFill />}
-              endCountNum={5}
+              endCountNum={7}
               badgeText="Finished Projects"
             />
             {/* Badge  */}
             <Badge
-              containerStyles="absolute top-[55%] -right-5 dark:text-slate-100 dark:bg-accent "
+              containerStyles="absolute  right-4 top-[45%] md:top-[55%] md:-right-5 dark:text-slate-100 dark:bg-accent "
               icon={<RiTeamFill />}
               endCountNum={100}
               badgeText="Happy Clients"
             />
-            <div className="absolute -right-2 -top-1 h-[500px] w-[500px] bg-hero_shape2_light bg-no-repeat dark:bg-hero_shape2_dark" />
+            <div className="absolute -right-2 -top-1  h-[450px] w-[450px]  bg-hero_shape2_light bg-contain bg-no-repeat md:h-[500px] md:w-[500px] dark:bg-hero_shape2_dark" />
             <DivImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom "
-              imgSrc="/hero/MySelftwo.png"
+              imgSrc="https://res.cloudinary.com/dzdcszrob/image/upload/v1719955881/playground-images/logo/gegixzr9l7gdotitpjfu.png"
             />
           </div>
         </div>

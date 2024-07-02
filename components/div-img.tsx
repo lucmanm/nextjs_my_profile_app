@@ -9,7 +9,7 @@ type DevImageProps={
 const DivImg : FC<DevImageProps>= ({containerStyles,imgSrc}) => {
   return (
     <div className={`${containerStyles}`}>
-      <Image src={imgSrc} fill priority alt=''/>
+      <Image src={imgSrc} fill priority alt='' className='object-cover'/>
     </div>
   )
 }
