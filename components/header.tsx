@@ -23,6 +23,7 @@ const Header = () => {
     };
   }, []);
   // Error: Navigation in dark mode not clear
+
   return (
     <header
       className={` dark:bg-slate-900 ${
