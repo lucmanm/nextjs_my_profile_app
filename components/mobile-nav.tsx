@@ -18,7 +18,7 @@ const MobileNav = (props: Props) => {
           <div className="flex flex-col items-center gap-y-32">
             <Logo />
             <Nav
-              containerStyles="flex flex-col items-center gap-y-6"
+              className="flex flex-col items-center gap-y-6"
               LinkStyles="text-2xl"
             />
           </div>

@@ -6,7 +6,7 @@ import {motion} from "framer-motion";
 import { usePathname } from "next/navigation";
 
 interface NavProps {
-  containerStyles: string;
+  className: string;
   LinkStyles: string;
   underlineStyles?: string;
 }
@@ -18,14 +18,14 @@ const links = [
 ];
 
 const Nav: React.FC<NavProps> = ({
-  containerStyles,
+  className,
   LinkStyles,
   underlineStyles,
 }) => {
   const path = usePathname();
 
   return (
-    <div className={`${containerStyles}`}>
+    <div className={`${className}`}>
       {links.map(({ url, name }) => (
         <Link href={url} key={name} className={`capitalize ${LinkStyles}`}>
           {url === path && (
