@@ -1,9 +1,10 @@
 "use client";
+import { cn } from "@/lib/utils";
 import React, { FC, ReactNode } from "react";
 import CountUp from "react-countup";
 
 type BadgeProps = {
-  containerStyles: string;
+  className: string;
   icon: ReactNode;
   endCountNum: number;
   endCountText?: string;
@@ -12,13 +13,13 @@ type BadgeProps = {
 
 const Badge: FC<BadgeProps> = ({
   badgeText,
-  containerStyles,
+  className,
   endCountNum,
   endCountText,
   icon,
 }) => {
   return (
-    <div className={`badge ${containerStyles}`}>
+    <div className={cn("badge",className)}>
       <div className="text-3xl text-primary ">{icon}</div>
       <div className="flex items-center gap-x-2">
         <div className="text-4xl leading-none font-bold text-primary ">

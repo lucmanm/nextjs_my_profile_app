@@ -6,17 +6,12 @@ import {
   RiTeamFill,
   RiWhatsappFill,
 } from "react-icons/ri";
-import { Button } from "./ui/button";
 import { Download } from "lucide-react";
 import Social from "./social";
 import DivImg from "./div-img";
 import Badge from "./badge";
 import CustomizedButton from "./ui/customized-button";
-import { personalData } from "@/lib/const-data";
-
 const Hero = () => {
-  const { socialMedia } = personalData[0];
-
   return (
     <section className="py-8">
       <div className="max-auto md:container">
@@ -57,28 +52,28 @@ const Hero = () => {
           <div className="relative overflow-hidden md:overflow-visible xl:flex">
             {/* Badge Experince */}
             <Badge
-              containerStyles="absolute left-3  top-[15%] md:top-[24%] md:-left-[1rem] dark:text-slate-100 dark:bg-accent"
+              className="absolute left-3  top-[14%] md:top-[14%] md:left-[6rem] dark:text-slate-100 dark:bg-accent"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Years of Experience"
             />
             {/* Badge  Projects*/}
             <Badge
-              containerStyles="absolute left-14 top-[70%] md:top-[80%]  md:-left-[1rem]  dark:text-slate-100 dark:bg-accent"
+              className="absolute left-14 top-[70%] md:top-[80%]  md:-left-[1rem]  dark:text-slate-100 dark:bg-accent"
               icon={<RiProjectorFill />}
               endCountNum={7}
               badgeText="Finished Projects"
             />
             {/* Badge  */}
             <Badge
-              containerStyles="absolute  right-4 top-[45%] md:top-[55%] md:-right-5 dark:text-slate-100 dark:bg-accent "
+              className="absolute  right-4 top-[45%] md:top-[55%] md:-right-5 dark:text-slate-100 dark:bg-accent "
               icon={<RiTeamFill />}
               endCountNum={100}
               badgeText="Happy Clients"
             />
             <div className="absolute -right-2 -top-1  h-[450px] w-[450px]  bg-hero_shape2_light bg-contain bg-no-repeat md:h-[500px] md:w-[500px] dark:bg-hero_shape2_dark" />
             <DivImg
-              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom "
+              className="relative h-[438px] w-[475px] bg-hero_shape bg-contain bg-bottom bg-no-repeat md:h-[463px] md:w-[510px] "
               imgSrc="https://res.cloudinary.com/dzdcszrob/image/upload/v1719955881/playground-images/logo/gegixzr9l7gdotitpjfu.png"
             />
           </div>

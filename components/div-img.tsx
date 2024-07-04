@@ -1,15 +1,16 @@
+import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import React, { FC } from 'react'
 
 type DevImageProps={
-  containerStyles: string
+  className: string
   imgSrc: string
 }
 
-const DivImg : FC<DevImageProps>= ({containerStyles,imgSrc}) => {
+const DivImg : FC<DevImageProps>= ({className,imgSrc}) => {
   return (
-    <div className={`${containerStyles}`}>
-      <Image src={imgSrc} fill priority alt='' className='object-cover'/>
+    <div className={cn(className)}>
+      <Image src={imgSrc} fill priority alt='' className='object-cover absolute bottom-16'/>
     </div>
   )
 }

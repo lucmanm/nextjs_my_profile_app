@@ -74,25 +74,25 @@
     @apply bg-background bg-slate-100 text-foreground;
   }
   .h1 {
-    @apply text-slate-950 dark:text-slate-100 text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold;
+    @apply text-base font-bold text-slate-950 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl dark:text-slate-100;
   }
   .h2 {
-    @apply text-slate-950 dark:text-slate-100 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl;
+    @apply text-sm text-slate-950 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-2xl dark:text-slate-100;
   }
   .h3 {
-    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl
+    @apply text-xs text-slate-950 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl dark:text-slate-100;
   }
   .h4 {
-    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl
+    @apply text-xs text-slate-950 sm:text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl dark:text-slate-100;
   }
   .h5 {
-    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg
+    @apply text-xs text-slate-950 sm:text-xs md:text-xs lg:text-sm xl:text-base 2xl:text-lg dark:text-slate-100;
   }
   .h6 {
-    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base;
+    @apply text-xs text-slate-950 sm:text-xs md:text-xs lg:text-xs xl:text-sm 2xl:text-base dark:text-slate-100;
   }
   .p {
-    @apply text-slate-950 dark:text-slate-100 text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-lg
+    @apply text-sm text-slate-950 sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-lg dark:text-slate-100;
   }
 }
 
@@ -101,7 +101,7 @@
     @apply h-6 w-6 rounded-full bg-slate-950 p-1 text-sky-100 md:h-8 md:w-8 md:p-1.5;
   }
   .span {
-    @apply text-slate-950 dark:text-slate-100 text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl;
+    @apply text-xs text-slate-950 sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl dark:text-slate-100;
   }
 }
 
@@ -110,7 +110,7 @@
 }
 
 .section-title {
-  @apply relative mx-auto mb-12 flex w-max items-center justify-between gap-x-3 text-center text-lg font-bold before:h-[24px] before:w-[24px] before:bg-dots_light before:bg-center before:bg-no-repeat dark:text-slate-100 before:dark:bg-dots_dark lg:text-4xl xl:mb-24;
+  @apply relative mx-auto mb-12 flex w-max items-center justify-between gap-x-3 text-center text-lg font-bold before:h-[24px] before:w-[24px] before:bg-dots_light before:bg-center before:bg-no-repeat lg:text-4xl xl:mb-24 dark:text-slate-100 before:dark:bg-dots_dark;
 }
 
 .badge {
