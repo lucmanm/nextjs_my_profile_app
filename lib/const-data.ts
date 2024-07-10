@@ -108,6 +108,16 @@ export const personalData = [
         github: "",
         isPublished: false
       },
+      {
+        image: "/work/4.png",
+        category: "React Native",
+        name: "Movie App",
+        teckStacks: ["React Native", "Expo", "Tanstack Query"],
+        description: "Movie App where you can save the to watchlist the movie",
+        link: "https://github.com/lucmanm/rnative_movie_app",
+        github: "https://github.com/lucmanm/rnative_movie_app",
+        isPublished: false
+      },
 
     ]
   }
