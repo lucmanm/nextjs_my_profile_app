@@ -3,7 +3,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import { GithubIcon, Link2Icon } from "lucide-react";
-import {  useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 type ProjectDataProps = {
   image: string;
@@ -27,7 +28,7 @@ export const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
       onClick={directUrl}
     >
       <CardHeader className="p-0">
-        <div className="bg-tertiary relative flex h-[200px] w-full items-center justify-center overflow-hidden dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat xl:dark:bg-accent">
+        <div className="bg-tertiary relative flex h-[200px] w-full items-center justify-center overflow-hidden xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat dark:bg-secondary/40 xl:dark:bg-accent">
           <Image
             src={project.image}
             width={350}
@@ -50,6 +51,12 @@ export const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
             >
               <GithubIcon className="text-white" />
             </Link>
+            <Button
+              onClick={() => {}}
+              className="flex h-[50px] w-[50px] scale-0 items-center justify-center rounded-full bg-slate-900 opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100 dark:hover:bg-green-500"
+            >
+              <GithubIcon className="text-white" />
+            </Button>
           </div>
         </div>
       </CardHeader>
@@ -66,4 +73,3 @@ export const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
     </Card>
   );
 };
-

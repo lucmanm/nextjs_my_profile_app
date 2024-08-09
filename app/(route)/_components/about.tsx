@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Briefcase,
   Calendar,
@@ -9,9 +9,9 @@ import {
   PhoneCall,
   User2,
 } from "lucide-react";
-import DivImg from "./div-img";
 import Image from "next/image";
 import { title } from "process";
+import DivImg from "@/components/div-img";
 
 const infoData = [
   {
