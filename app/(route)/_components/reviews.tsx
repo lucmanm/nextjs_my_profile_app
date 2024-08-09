@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Pagination } from "swiper/modules";
-import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
 const reviewsData = [

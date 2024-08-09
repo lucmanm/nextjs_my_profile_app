@@ -152,17 +152,17 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="xl:h-[860px] pb-12 xl:py-24 mt-60 xl:mt-0">
+    <section className="mt-60 pb-12 xl:mt-0 xl:h-[860px] xl:py-24">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto flip-ho">
+        <h2 className="section-title flip-ho mx-auto mb-8 text-center xl:mb-16">
           About Me{" "}
         </h2>
         <div className="flex flex-col xl:flex-row">
           {/* Iamge */}
           {/*TODO: Chnage font Cover Image here */}
-          <div className="hidden xl:flex flex-1 relative">
+          <div className="relative hidden flex-1 xl:flex">
             <DivImg
-              className="bg-about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative relative "
+              className="relative h-[505px] w-[505px] bg-about_shape_light bg-no-repeat dark:bg-about_shape_dark "
               imgSrc="/about/MySelftwo.png"
             />
           </div>
@@ -171,33 +171,33 @@ const AboutSection = () => {
           {/* TODO: Bug on My Journy data */}
           <div className="flex-1">
             <Tabs defaultValue="skills">
-              <TabsList className=" xl:bg-white p-1  rounded-[30px] dark:md:bg-secondary w-full xl:grid-cols-3 xl:max-w-[520px] xl:border dark:border-none h-[48px]">
+              <TabsList className=" h-[48px] w-full  rounded-[30px] p-1 xl:max-w-[520px] xl:grid-cols-3 xl:border xl:bg-white dark:border-none dark:md:bg-secondary">
                 <TabsTrigger
-                  className="rounded-full text-base h-[48px] w-full"
+                  className="h-[48px] w-full rounded-full text-base"
                   value="personal"
                 >
                   Personal Info
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full text-base h-[48px] w-full"
+                  className="h-[48px] w-full rounded-full text-base"
                   value="qualificaitons"
                 >
                   Qualificaitons
                 </TabsTrigger>
                 <TabsTrigger
-                  className="rounded-full text-base h-[48px] w-full"
+                  className="h-[48px] w-full rounded-full text-base"
                   value="skills"
                 >
                   Skills
                 </TabsTrigger>
               </TabsList>
-              <div className="text-lg mt-12 xl:mt-8">
+              <div className="mt-12 text-lg xl:mt-8">
                 <TabsContent value="personal">
-                  <div className="grid xl:grid-cols-2 gap-4 mb-12 left">
+                  <div className="left mb-12 grid gap-4 xl:grid-cols-2">
                     {infoData.map(({ icon, text }) => (
                       <div
                         key={text}
-                        className="flex items-center gap-x-4 mx-auto xl:mx-0 "
+                        className="mx-auto flex items-center gap-x-4 xl:mx-0 "
                       >
                         <div className="text-primary">{icon}</div>
                         <div>{text}</div>
@@ -214,12 +214,12 @@ const AboutSection = () => {
                   <div>
                     <h3 className="h3">My Journy</h3>
                   </div>
-                  <div className="grid md:grid-cols-2 gap-y-8">
+                  <div className="grid gap-y-8 md:grid-cols-2">
                     {/* Experience */}
                     <div className="flex flex-col gap-y-6">
-                      <div className="flex gap-x-4 items-center text-[22px]text-primary">
+                      <div className="text-[22px]text-primary flex items-center gap-x-4">
                         <Briefcase />
-                        <h4 className="capitalize font-medium py-2">
+                        <h4 className="py-2 font-medium capitalize">
                           {getData(qualificationData, "experience")?.title}
                         </h4>
                       </div>
@@ -227,15 +227,15 @@ const AboutSection = () => {
                         {getData(qualificationData, "experience")?.data.map(
                           (data, index) => {
                             return (
-                              <div key={index} className="flex gap-x-8 group ">
-                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] translate-all duration-500" />
+                              <div key={index} className="group flex gap-x-8 ">
+                                <div className="relative ml-2 h-[84px] w-[1px] bg-border">
+                                  <div className="translate-all absolute -left-[5px] h-[11px] w-[11px] rounded-full bg-primary duration-500 group-hover:translate-y-[84px]" />
                                 </div>
                                 <div>
-                                  <div className="font-semibold text-xl leading-none mb-2">
+                                  <div className="mb-2 text-xl font-semibold leading-none">
                                     {data.company}
                                   </div>
-                                  <div className="text-lg leading-none text-muted-foreground mb-4">
+                                  <div className="mb-4 text-lg leading-none text-muted-foreground">
                                     {data.role}
                                   </div>
                                   <div className="text-base font-medium">
@@ -244,14 +244,14 @@ const AboutSection = () => {
                                 </div>
                               </div>
                             );
-                          }
+                          },
                         )}
                       </div>
                     </div>
                     <div className="flex flex-col gap-y-6">
-                      <div className="flex gap-x-4 items-center text-[22px]text-primary">
+                      <div className="text-[22px]text-primary flex items-center gap-x-4">
                         <Briefcase />
-                        <h4 className="capitalize font-medium py-2">
+                        <h4 className="py-2 font-medium capitalize">
                           {getData(qualificationData, "education")?.title}
                         </h4>
                       </div>
@@ -259,15 +259,15 @@ const AboutSection = () => {
                         {getData(qualificationData, "education")?.data.map(
                           (data, index) => {
                             return (
-                              <div key={index} className="flex gap-x-8 group ">
-                                <div className="h-[84px] w-[1px] bg-border relative ml-2">
-                                  <div className="w-[11px] h-[11px] rounded-full bg-primary absolute -left-[5px] group-hover:translate-y-[84px] translate-all duration-500" />
+                              <div key={index} className="group flex gap-x-8 ">
+                                <div className="relative ml-2 h-[84px] w-[1px] bg-border">
+                                  <div className="translate-all absolute -left-[5px] h-[11px] w-[11px] rounded-full bg-primary duration-500 group-hover:translate-y-[84px]" />
                                 </div>
                                 <div>
-                                  <div className="font-semibold text-xl leading-none mb-2">
+                                  <div className="mb-2 text-xl font-semibold leading-none">
                                     {data.university}
                                   </div>
-                                  <div className="text-lg leading-none text-muted-foreground mb-4">
+                                  <div className="mb-4 text-lg leading-none text-muted-foreground">
                                     {data.qualification}
                                   </div>
                                   <div className="text-base font-medium">
@@ -276,7 +276,7 @@ const AboutSection = () => {
                                 </div>
                               </div>
                             );
-                          }
+                          },
                         )}
                       </div>
                     </div>
@@ -286,8 +286,8 @@ const AboutSection = () => {
                   <div className="text-center xl:text-left">
                     <h3 className="h3 mb-8">Tools that i Know</h3>
                     <div>
-                      <h4 className="text-xl font-semibold mb-2">Skills</h4>
-                      <div className="border-b border-border  mb-4"></div>
+                      <h4 className="mb-2 text-xl font-semibold">Skills</h4>
+                      <div className="mb-4 border-b  border-border"></div>
 
                       {/* Skills  */}
                       <div>
@@ -295,7 +295,7 @@ const AboutSection = () => {
                           return (
                             <div
                               key={index}
-                              className="w-2/4 text-center xl:text-left mx-auto xl:mx-0"
+                              className="mx-auto w-2/4 text-center xl:mx-0 xl:text-left"
                             >
                               <div className="font-medium">{skill.name}</div>
                             </div>
@@ -303,7 +303,7 @@ const AboutSection = () => {
                         })}
                       </div>
                       {/* Tools */}
-                      <div className="flex gap-x-8 justify-center xl:justify-start">
+                      <div className="flex justify-center gap-x-8 xl:justify-start">
                         {skillsData[1].data.map((data, index) => {
                           return (
                             <div key={index}>
