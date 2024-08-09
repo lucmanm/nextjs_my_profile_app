@@ -1,9 +1,7 @@
-import AboutSection from "@/components/about";
-import ContactUs from "@/components/cta";
-import Hero from "@/components/hero";
-import Reviews from "@/components/reviews";
-import MySkills from "@/components/MySkills";
-import RecentProjects from "@/components/recent-projects";
+import Hero from "@/app/(route)/_components/hero";
+import RecentProjects from "@/app/(route)/_components/recent-projects";
+import MySkills from "./_components/MySkills";
+import ContactUs from "./_components/cta";
 
 export default function Home() {
   return (

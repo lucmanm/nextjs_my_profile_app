@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import ProjectCard from "@/components/project-card";
 import { personalData } from "@/lib/const-data";
+import { ProjectCard } from "../_components/project-card";
 
 
 

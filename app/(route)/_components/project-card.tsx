@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Badge } from "./ui/badge";
-import { Card, CardHeader } from "./ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
 import { GithubIcon, Link2Icon } from "lucide-react";
 import {  useRouter } from "next/navigation";
@@ -15,7 +15,7 @@ type ProjectDataProps = {
   github: string;
 };
 
-const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
+export const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   const router = useRouter();
   const directUrl = () => {
     router.push(`/projects/${project.description}`);
@@ -67,4 +67,3 @@ const ProjectCard = ({ project }: { project: ProjectDataProps }) => {
   );
 };
 
-export default ProjectCard;

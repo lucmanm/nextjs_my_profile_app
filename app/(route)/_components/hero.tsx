@@ -7,10 +7,10 @@ import {
   RiWhatsappFill,
 } from "react-icons/ri";
 import { Download } from "lucide-react";
-import Social from "./social";
-import DivImg from "./div-img";
-import Badge from "./badge";
-import CustomizedButton from "./ui/customized-button";
+import Social from "../../../components/social";
+import DivImg from "../../../components/div-img";
+import Badge from "../../../components/badge";
+import CustomizedButton from "../../../components/ui/customized-button";
 const Hero = () => {
   return (
     <section className="py-8">

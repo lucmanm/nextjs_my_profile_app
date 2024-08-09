@@ -1,10 +1,6 @@
 import {
-  GanttChartSquare,
   Blocks,
   Gem,
-  Code,
-  Code2,
-  CodeIcon,
   Code2Icon,
 } from "lucide-react";
 import {
@@ -13,7 +9,7 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-} from "./ui/card";
+} from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { RiArrowDownSLine } from "react-icons/ri";

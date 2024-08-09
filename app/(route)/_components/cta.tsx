@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Button } from "./ui/button";
-import CustomizedButton from "./ui/customized-button";
+import { Button } from "@/components/ui/button";
+import CustomizedButton from "@/components/ui/customized-button";
 import { RiWhatsappFill } from "react-icons/ri";
 
 const ContactUs = () => {
