@@ -1,8 +1,4 @@
-import {
-  RiFacebookBoxFill,
-  RiGithubFill,
-  RiLinkedinBoxFill,
-} from "react-icons/ri";
+
 export const category = ["React", "Nextjs", "Laravel"] as const
 
 
@@ -28,6 +24,26 @@ export const personalData = [
       },
     ],
     projects: [
+      {
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1723239014/playground-images/app-images/z7vkz94g3oypma0fetle.jpg",
+        category: "React Native",
+        name: "Martketplace",
+        teckStacks: ["React Native", "Expo"],
+        description: "Simple martketplace app where you can create, read, update and delete an app also wth google auth",
+        link: "https://github.com/lucmanm/rnative_movie_app",
+        github: "https://github.com/lucmanm/rnative_movie_app",
+        isPublished: false
+      },
+      {
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1723238525/playground-images/app-images/igkwjk9ntl34hmbn9dl9.jpg",
+        category: "React Native",
+        name: "Movie App",
+        teckStacks: ["React Native", "Expo", "Tanstack Query"],
+        description: "Movie App where you can save the to watchlist the movie",
+        link: "https://github.com/lucmanm/rnative_movie_app",
+        github: "https://github.com/lucmanm/rnative_movie_app",
+        isPublished: false
+      },
       {
         image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719349323/playground-images/fpwdfyznf8dg9ydms25t.png",
         category: "Nextjs",
@@ -106,16 +122,6 @@ export const personalData = [
         description: "Excercise application ",
         link: "/",
         github: "",
-        isPublished: false
-      },
-      {
-        image: "/work/4.png",
-        category: "React Native",
-        name: "Movie App",
-        teckStacks: ["React Native", "Expo", "Tanstack Query"],
-        description: "Movie App where you can save the to watchlist the movie",
-        link: "https://github.com/lucmanm/rnative_movie_app",
-        github: "https://github.com/lucmanm/rnative_movie_app",
         isPublished: false
       },
 
