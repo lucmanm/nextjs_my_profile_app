@@ -10,7 +10,7 @@ const Logo = (props: Props) => {
   return (
     <Link
       href="/"
-      className="flex items-center gap-x-4 p-4 *:text-3xl *:font-bold"
+      className="flex items-center gap-x-4 p-4 *:text-xl *:font-bold"
     >
       <Image
         src="https://res.cloudinary.com/dzdcszrob/image/upload/v1719872152/playground-images/logo/lb4vpkxpqsbbwi4prjtq.png"
