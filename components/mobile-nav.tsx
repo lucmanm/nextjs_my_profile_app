@@ -1,32 +1,29 @@
-import React from "react";
+import React, { Dispatch, SetStateAction, useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
 import { AlignJustify } from "lucide-react";
 import Logo from "./logo";
-import Nav from "./nav";
-import Social from "./social";
+import { Social } from "./social";
+import { Navigation } from "./navigation";
 
-type Props = {};
-// Need more costumization
-const MobileNav = (props: Props) => {
+export const MbNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
   return (
-    <Sheet>
+    <Sheet open={isOpen} onOpenChange={setIsOpen}>
       <SheetTrigger asChild>
         <AlignJustify className="cursor-pointer" />
       </SheetTrigger>
-      <SheetContent>
-        <div className="flex flex-col items-center justify-between h-full py-8">
-          <div className="flex flex-col items-center gap-y-32">
-            <Logo />
-            <Nav
-              className="flex flex-col items-center gap-y-6"
-              LinkStyles="text-2xl"
-            />
-          </div>
-            <Social containerStyle="flex gap-x-4" iconsStyles="text-2xl" />
+      <SheetContent className="flex flex-1 flex-col">
+        <div className="flex flex-col items-center gap-y-32">
+          <Logo showname />
         </div>
+        {/* Cutomize the props when it in mobile */}
+        <Navigation
+          className="flex flex-1 flex-col justify-start"
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+        />
+        <Social className="flex gap-x-4 " iconsStyles="text-2xl" />
       </SheetContent>
     </Sheet>
   );
 };
-
-export default MobileNav;

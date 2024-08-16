@@ -7,7 +7,7 @@ import {
   RiWhatsappFill,
 } from "react-icons/ri";
 import { Download } from "lucide-react";
-import Social from "../../../components/social";
+import { Social } from "../../../components/social";
 import DivImg from "../../../components/div-img";
 import Badge from "../../../components/badge";
 import CustomizedButton from "../../../components/ui/customized-button";
@@ -42,7 +42,7 @@ const Hero = () => {
               </Link>
             </div>
             <Social
-              containerStyle="flex gap-x-6 mx-auto xl:mx-0 my-8"
+              className="flex gap-x-6 mx-auto xl:mx-0 my-8"
               iconsStyles={
                 "text-foreground text-[22px] hover:text-primary transition-all hover:text-blue-950 dark:text-slate-100 dark:hover:text-green-500"
               }
@@ -52,21 +52,21 @@ const Hero = () => {
           <div className="relative overflow-hidden md:overflow-visible xl:flex">
             {/* Badge Experince */}
             <Badge
-              className="absolute left-3  top-[14%] md:top-[14%] md:left-[6rem] dark:text-slate-100 dark:bg-accent"
+              className="absolute left-3  top-[14%] md:left-[6rem] md:top-[14%] dark:bg-accent dark:text-slate-100"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Years of Experience"
             />
             {/* Badge  Projects*/}
             <Badge
-              className="absolute left-14 top-[70%] md:top-[80%]  md:-left-[1rem]  dark:text-slate-100 dark:bg-accent"
+              className="absolute left-14 top-[70%] md:-left-[1rem]  md:top-[80%]  dark:bg-accent dark:text-slate-100"
               icon={<RiProjectorFill />}
               endCountNum={7}
               badgeText="Finished Projects"
             />
             {/* Badge  */}
             <Badge
-              className="absolute  right-4 top-[45%] md:top-[55%] md:-right-5 dark:text-slate-100 dark:bg-accent "
+              className="absolute  right-4 top-[45%] md:-right-5 md:top-[55%] dark:bg-accent dark:text-slate-100 "
               icon={<RiTeamFill />}
               endCountNum={100}
               badgeText="Happy Clients"

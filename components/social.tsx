@@ -28,13 +28,13 @@ type IconsProps = {
 };
 
 type SocialProps = {
-  containerStyle?: string;
+  className?: string;
   iconsStyles?: string;
 };
 
-const Social: FC<SocialProps> = ({ containerStyle, iconsStyles }) => {
+export const Social: FC<SocialProps> = ({ className, iconsStyles }) => {
   return (
-    <div className={cn("flex gap-x-6 mx-auto xl:mx-0 mb-4", containerStyle)}>
+    <div className={cn("flex gap-x-6 mx-auto xl:mx-0 mb-4", className)}>
       {icons.map(({ url, name }: IconsProps) => {
         return (
           <Link href={url} key={url}>
@@ -52,5 +52,3 @@ const Social: FC<SocialProps> = ({ containerStyle, iconsStyles }) => {
     </div>
   );
 };
-
-export default Social;

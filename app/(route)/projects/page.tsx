@@ -27,6 +27,7 @@ const ProjectsPage = () => {
         : project.category === category;
     }
   );
+
   return (
     <section className="min-h-screen pt-12">
       <div className="container mx-auto">
