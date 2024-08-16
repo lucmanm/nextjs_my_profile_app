@@ -1,5 +1,5 @@
 
-export const category = ["React", "Nextjs", "Laravel"] as const
+export type category = "React" | "Nextjs" | "Laravel"
 
 
 export const personalData = [
@@ -24,6 +24,17 @@ export const personalData = [
       },
     ],
     projects: [
+      {
+        image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1723817251/playground-images/ohzrqjta3lhhyhubyjly.png",
+        category: "Nextjs",
+        name: "eShop Admin",
+        teckStacks: ["React", "Nextjs"],
+        description: "online shopping with english and arabic language in it.",
+        link: "eshop-admin.lucmanm.tech",
+        github: "https://github.com/lucmanm/nextjs-eshop-admin-dashboard",
+        isPublished: true,
+        videoUrl: undefined
+      },
       {
         image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1723239014/playground-images/app-images/z7vkz94g3oypma0fetle.jpg",
         category: "React Native",
