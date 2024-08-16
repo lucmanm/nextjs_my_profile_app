@@ -44,7 +44,7 @@ export const personalData = [
         link: "https://github.com/lucmanm/rnative_movie_app",
         github: "https://github.com/lucmanm/rnative_movie_app",
         isPublished: true,
-        videoUrl: "https://www.youtube.com/embed/it1rTvBcfRg"
+        videoUrl: "https://www.youtube.com/watch?v=pxjWetyy9TY"
       },
       {
         image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1723238525/playground-images/app-images/igkwjk9ntl34hmbn9dl9.jpg",
@@ -55,7 +55,7 @@ export const personalData = [
         link: "https://github.com/lucmanm/rnative_movie_app",
         github: "https://github.com/lucmanm/rnative_movie_app",
         isPublished: true,
-        videoUrl: "https://www.youtube.com/embed/it1rTvBcfRg"
+        videoUrl: "https://www.youtube.com/shorts/fSCsn6V7q0k"
       },
       {
         image: "https://res.cloudinary.com/dzdcszrob/image/upload/v1719349323/playground-images/fpwdfyznf8dg9ydms25t.png",
