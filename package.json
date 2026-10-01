@@ -1,6 +1,7 @@
 {
   "name": "my_profile",
   "version": "0.1.0",
+  "packageManager": "pnpm@12.4.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
