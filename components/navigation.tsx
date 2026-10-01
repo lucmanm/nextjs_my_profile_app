@@ -15,7 +15,8 @@ interface NavProps {
 
 const links = [
   { url: "/", name: "home" },
-  { url: "/projects", name: "my projects" },
+  { url: "/projects", name: "Web Projects" },
+  { url: "/graphic-design", name: "Graphic Design" },
   { url: "/contact", name: "contact me" },
 ];
 
