@@ -25,7 +25,7 @@ const Project = ({ params }: { params: { projectID: string } }) => {
           alt={project.description}
           height={500}
           width={500}
-          className="h-[250px] w-full rounded-md bg-slate-100/30 object-none md:h-[500px] md:w-7/12 "
+          className="h-[250px] rounded-md bg-slate-100/30 object-none md:h-[500px] md:w-7/12 w-full h-auto"
         />
 
         <div className="space-y-2 rounded-md bg-slate-200 p-4 py-2 md:p-8 md:py-8">
@@ -43,12 +43,12 @@ const Project = ({ params }: { params: { projectID: string } }) => {
           {/*Summary description for the projects*/}
           <h2 className="h2">{project.description}</h2>
           {/* Redirect Links */}
-          <div  className="flex flex-row items-center gap-2">
+          <div className="flex flex-row items-center gap-2">
             <Link href={project.link} className="p">
-            <DirectLink className="icon" />
+              <DirectLink className="icon" />
             </Link>
             <Link href={project.github} className="p">
-            <Github className="icon" />
+              <Github className="icon" />
             </Link>
           </div>
         </div>
