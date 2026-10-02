@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/providers/theme-provider";
 import { Toaster } from "@/components/ui/toaster";
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
-import "styles/globals.css";
+import "@/styles/globals.css";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
